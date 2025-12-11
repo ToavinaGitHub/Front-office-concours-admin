@@ -1,0 +1,210 @@
+﻿/* Style moderne pour les cards */
+.card-modern {
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    background: #ffffff;
+    border: none;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.card-modern:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.job-card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.job-location {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.search-card {
+    border-radius: 16px;
+    padding: 25px;
+    background: #f0f4ff;
+    border: 1px solid #e0e7ff;
+    box-shadow: 0 6px 16px rgba(78, 115, 223, 0.12);
+}
+
+.btn-modern {
+    border-radius: 10px;
+    padding: 10px 18px;
+    font-weight: 600;
+}
+
+.scroll-down-arrow {
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 30px;
+}
+
+.scroll-down-arrow i {
+    font-size: 35px;
+    color: #4E73DF;
+    animation: bounce 1.4s infinite;
+    cursor: pointer;
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); opacity: 0.7; }
+    50% { transform: translateY(10px); opacity: 1; }
+    100% { transform: translateY(0); opacity: 0.7; }
+}
+
+.badge-custom-success {
+    display: inline-block;
+    padding: 0.35em 0.65em;
+    font-size: 0.75em;
+    font-weight: 500;
+    line-height: 1;
+    color: #fff;
+    background-color: #28a745; /* vert succès */
+    border-radius: 0.35rem;
+}
+
+.badge-custom-success:hover {
+    background-color: #28a745;
+}
+
+.badge-custom-danger {
+    display: inline-block;
+    padding: 0.35em 0.65em;
+    font-size: 0.75em;
+    font-weight: 500;
+    line-height: 1;
+    color: #fff;
+    background-color: #dc3545;
+    border-radius: 0.35rem;
+    text-align: center;
+}
+
+.badge-custom-danger:hover {
+    background-color: #dc3545;
+}
+
+.badge-custom-warning {
+    display: inline-block;
+    padding: 0.35em 0.65em;
+    font-size: 0.75em;
+    font-weight: 500;
+    line-height: 1;
+    color: #fff;
+    background-color: #dc3545;
+    border-radius: 0.35rem;
+    text-align: center;
+}
+
+.badge-custom-danger:hover {
+    background-color: #dc3545;
+}
+.card-modern {
+    position: relative; /* nécessaire pour le badge absolu */
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+
+.badge-top-right {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.job-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: #555;
+}
+
+.job-footer i {
+    margin-right: 0.25rem;
+    color: #888;
+}
+
+.job-entity {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.job-entity i {
+    color: #888;
+}
+#moreFields{
+    display: flex;
+}
+
+.results-bar {
+    background-color: #ffffff;
+    border-radius: 12px;       
+    padding: 12px 16px;        
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;       
+    flex-wrap: wrap;           
+}
+
+.results-bar .results {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.results-bar h6 {
+    margin: 0;
+    font-weight: 500;
+    color: #333;
+}
+
+.pagination-circle {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination-circle .page-item {
+    list-style: none;
+}
+
+.pagination-circle .page-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #4E73DF;
+    color: #4E73DF;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.pagination-circle .page-item.active .page-link {
+    background-color: #4E73DF;
+    color: #fff;
+    border-color: #4E73DF;
+}
+
+.pagination-circle .page-link:hover:not(.active) {
+    background-color: #e3e9ff;
+    color: #4E73DF;
+}
+

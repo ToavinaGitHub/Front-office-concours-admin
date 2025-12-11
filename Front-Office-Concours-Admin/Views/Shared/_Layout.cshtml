@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Exam.gov</title>
+
+    <!-- Google Font moderne -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background:  #F5F7FB;
+        }
+
+        /* HEADER MODERNE */
+        .navbar-modern {
+            background: #4E73DF;
+            padding: 0.8rem 1rem;
+            border-radius: 12px;
+            margin-top: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .navbar-modern .navbar-brand {
+            color: #fff !important;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        .navbar-modern .nav-link {
+            color: #e3e3e3 !important;
+            margin: 0 8px;
+            font-weight: 500;
+            transition: all 0.25s ease;
+        }
+
+        .navbar-modern .nav-link:hover {
+            color: #fff !important;
+            transform: translateY(-2px);
+        }
+
+        /* FOOTER MODERNE */
+        footer {
+            background : #40798C;
+            border-radius: 12px 12px 0 0;
+            padding: 15px 0;
+            margin-top: 40px;
+            box-shadow: 0 -3px 10px rgba(0,0,0,0.08);
+        }
+
+        /* HEADER FIXE */
+        .header-fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 9999;
+        }
+
+        /* Ajoute de la marge au contenu pour ne pas être caché par le header */
+        body.with-fixed-header {
+            padding-top: 90px; /* ajuste si besoin */
+        }
+        
+        .btn-signup{
+            background: white;
+            color: #4E73DF;
+        }
+
+    </style>
+</head>
+
+<body class="with-fixed-header">
+<header class="container header-fixed">
+    <nav class="navbar navbar-expand-sm navbar-modern">
+        <div class="container-fluid">
+
+            <!-- Brand -->
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                Exam.gov
+            </a>
+
+            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Annonces" asp-action="Index">Annonces</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Mes candidature</a>
+                    </li>
+                </ul>
+                <div class="d-flex gap-2">
+                    <a class="btn btn-outline-light">S’inscrire</a>
+                    <a class="btn btn-signup">Se connecter</a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+</header>
+
+<div class="container mt-4">
+    <main role="main">
+        @RenderBody()
+    </main>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+@await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

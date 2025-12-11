@@ -1,0 +1,265 @@
+﻿@{
+    ViewData["Title"] = "Recherche d'emploi";
+}
+
+<link rel="stylesheet" href="~/css/annonces.css" asp-append-version="true" />
+<!-- Bootstrap Icons pour la flèche -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+<div class="container mt-4">
+    
+    <!-- 🔍 Formulaire de recherche -->
+    <div class="search-card mb-1">
+        <form method="get">
+            <div class="row g-3">
+
+                <div class="col-md-4">
+                    <label class="form-label">Titre du poste</label>
+                    <input class="form-control" name="title" placeholder="Ex: Développeur, Comptable..." />
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label">Lieu</label>
+                    <input class="form-control" name="location" placeholder="Ex: Antananarivo, Tamatave" />
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label">Type de contrat</label>
+                    <select class="form-select" name="typeContrat">
+                        <option value="">Tous</option>
+                        <option>CDI</option>
+                        <option>CDD</option>
+                        <option>Stage</option>
+                        <option>Freelance</option>
+                    </select>
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label">Diplôme requis</label>
+                    <select class="form-select" name="diplome">
+                        <option value="">Tous</option>
+                        <option>CEPE</option>
+                        <option>BEPC</option>
+                        <option>BACC</option>
+                        <option>Licence</option>
+                        <option>Master</option>
+                        <option>Doctorat</option>
+                    </select>
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label">Durée de travail</label>
+                    <select class="form-select" name="horaire">
+                        <option value="">Tous</option>
+                        <option>Temps plein</option>
+                        <option>Temps partiel</option>
+                    </select>
+                </div>
+
+                <div class="col-12 text-end mt-3">
+                    <button type="submit" class="btn btn-primary btn-modern">
+                        Rechercher
+                    </button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+    
+
+    <!-- 📄 Liste des jobs -->
+    <div class="results-bar">
+        <!-- Sélecteur nombre d'éléments -->
+        <div class="d-flex align-items-center results">
+            <label class="me-2 mb-0">Afficher :</label>
+            <select class="form-select form-select-sm" style="width: 80px;" name="pageSize">
+                <option value="6" selected>6</option>
+                <option value="9">9</option>
+                <option value="12">12</option>
+            </select>
+        </div>
+
+        <h6 class="mb-0">Page <strong>1</strong> sur <strong>3</strong></h6>
+        <h6 class="mb-0"><strong>12</strong> résultats</h6>
+    </div>
+
+    
+    <div class="row g-4">
+
+    <!-- JOB 1 -->
+        <div class="col-md-4">
+            <div class="card-modern h-100 p-3 position-relative">
+                <span class="badge-custom-success badge-top-right">Temps plein</span>
+
+                <div class="job-card-title">Développeur Full Stack</div>
+                <div class="job-entity">
+                    <i class="bi bi-building"></i> Ministère de l’Éducation
+                </div>
+                <div class="job-location mb-2">Antananarivo - CDI</div>
+                <p>Rejoignez une équipe dynamique pour développer des applications web modernes.</p>
+                <div class="job-footer d-flex justify-content-between align-items-center mt-3">
+                    <div class="job-date"><i class="bi bi-clock"></i> 10/12/2025</div>
+                    <button class="btn btn-outline-primary btn-modern">Voir l’offre</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- JOB 2 -->
+        <div class="col-md-4">
+            <div class="card-modern h-100 p-3 position-relative">
+                <span class="badge-custom-warning badge-top-right">Temps partiel</span>
+
+                <div class="job-card-title">Comptable Senior</div>
+                <div class="job-entity">
+                    <i class="bi bi-building"></i> Police Nationale
+                </div>
+                <div class="job-location mb-2">Tamatave - CDD</div>
+                <p>Assurez la gestion financière et comptable d’une administration publique.</p>
+                <div class="job-footer d-flex justify-content-between align-items-center mt-3">
+                    <div class="job-date"><i class="bi bi-clock"></i> 09/12/2025</div>
+                    <button class="btn btn-outline-primary btn-modern">Voir l’offre</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- JOB 3 -->
+        <div class="col-md-4">
+            <div class="card-modern h-100 p-3 position-relative">
+                <span class="badge-custom-success badge-top-right">Temps plein</span>
+
+                <div class="job-card-title">Chef de Projet</div>
+                <div class="job-entity">
+                    <i class="bi bi-building"></i> Ministère de la Santé
+                </div>
+                <div class="job-location mb-2">Antsirabe - CDI</div>
+                <p>Coordonnez et pilotez des projets innovants dans un cadre stimulant.</p>
+                <div class="job-footer d-flex justify-content-between align-items-center mt-3">
+                    <div class="job-date"><i class="bi bi-clock"></i> 08/12/2025</div>
+                    <button class="btn btn-outline-primary btn-modern">Voir l’offre</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- JOB 4 -->
+        <div class="col-md-4">
+            <div class="card-modern h-100 p-3 position-relative">
+                <span class="badge-custom-warning badge-top-right">Temps partiel</span>
+
+                <div class="job-card-title">Technicien Informatique</div>
+                <div class="job-entity">
+                    <i class="bi bi-building"></i> Ministère de la Défense
+                </div>
+                <div class="job-location mb-2">Mahajanga - CDD</div>
+                <p>Maintenance et gestion des systèmes informatiques pour le ministère.</p>
+                <div class="job-footer d-flex justify-content-between align-items-center mt-3">
+                    <div class="job-date"><i class="bi bi-clock"></i> 07/12/2025</div>
+                    <button class="btn btn-outline-primary btn-modern">Voir l’offre</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- JOB 5 -->
+        <div class="col-md-4">
+            <div class="card-modern h-100 p-3 position-relative">
+                <span class="badge-custom-success badge-top-right">Temps plein</span>
+
+                <div class="job-card-title">Assistant Administratif</div>
+                <div class="job-entity">
+                    <i class="bi bi-building"></i> Ministère de l’Intérieur
+                </div>
+                <div class="job-location mb-2">Fianarantsoa - CDI</div>
+                <p>Gestion administrative et suivi des dossiers au sein du ministère.</p>
+                <div class="job-footer d-flex justify-content-between align-items-center mt-3">
+                    <div class="job-date"><i class="bi bi-clock"></i> 06/12/2025</div>
+                    <button class="btn btn-outline-primary btn-modern">Voir l’offre</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- JOB 6 -->
+        <div class="col-md-4">
+            <div class="card-modern h-100 p-3 position-relative">
+                <span class="badge-custom-warning badge-top-right">Temps partiel</span>
+
+                <div class="job-card-title">Chargé de Communication</div>
+                <div class="job-entity">
+                    <i class="bi bi-building"></i> Police Municipale
+                </div>
+                <div class="job-location mb-2">Antsiranana - CDD</div>
+                <p>Développement de la communication interne et externe de la municipalité.</p>
+                <div class="job-footer d-flex justify-content-between align-items-center mt-3">
+                    <div class="job-date"><i class="bi bi-clock"></i> 05/12/2025</div>
+                    <button class="btn btn-outline-primary btn-modern">Voir l’offre</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- JOB 7 -->
+        <div class="col-md-4">
+            <div class="card-modern h-100 p-3 position-relative">
+                <span class="badge-custom-success badge-top-right">Temps plein</span>
+
+                <div class="job-card-title">Analyste de Données</div>
+                <div class="job-entity">
+                    <i class="bi bi-building"></i> Ministère des Transports
+                </div>
+                <div class="job-location mb-2">Toliara - CDI</div>
+                <p>Analyse des données publiques pour améliorer les services aux citoyens.</p>
+                <div class="job-footer d-flex justify-content-between align-items-center mt-3">
+                    <div class="job-date"><i class="bi bi-clock"></i> 04/12/2025</div>
+                    <button class="btn btn-outline-primary btn-modern">Voir l’offre</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- JOB 8 -->
+        <div class="col-md-4">
+            <div class="card-modern h-100 p-3 position-relative">
+                <span class="badge-custom-warning badge-top-right">Temps partiel</span>
+
+                <div class="job-card-title">Agent d’Accueil</div>
+                <div class="job-entity">
+                    <i class="bi bi-building"></i> Ministère de la Culture
+                </div>
+                <div class="job-location mb-2">Sambava - CDD</div>
+                <p>Accueil et orientation des visiteurs dans les services culturels.</p>
+                <div class="job-footer d-flex justify-content-between align-items-center mt-3">
+                    <div class="job-date"><i class="bi bi-clock"></i> 03/12/2025</div>
+                    <button class="btn btn-outline-primary btn-modern">Voir l’offre</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- JOB 9 -->
+        <div class="col-md-4">
+            <div class="card-modern h-100 p-3 position-relative">
+                <span class="badge-custom-success badge-top-right">Temps plein</span>
+
+                <div class="job-card-title">Inspecteur</div>
+                <div class="job-entity">
+                    <i class="bi bi-building"></i> Gendarmerie Nationale
+                </div>
+                <div class="job-location mb-2">Morondava - CDI</div>
+                <p>Supervision des opérations de sécurité et contrôle sur le terrain.</p>
+                <div class="job-footer d-flex justify-content-between align-items-center mt-3">
+                    <div class="job-date"><i class="bi bi-clock"></i> 02/12/2025</div>
+                    <button class="btn btn-outline-primary btn-modern">Voir l’offre</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+    <!-- PAGINATION + SELECT ITEMS PER PAGE -->
+    <div class="d-flex justify-content-end mt-4">
+        <ul class="pagination pagination-circle mb-0">
+            <li class="page-item disabled"><a class="page-link">‹</a></li>
+            <li class="page-item active"><a class="page-link">1</a></li>
+            <li class="page-item"><a class="page-link">2</a></li>
+            <li class="page-item"><a class="page-link">3</a></li>
+            <li class="page-item"><a class="page-link">›</a></li>
+        </ul>
+    </div>
+</div>
+
+
