@@ -86,7 +86,7 @@
     
     <div class="row g-4">
 
-    <!-- JOB 1 -->
+        <!-- JOB 1 -->
         <div class="col-md-4">
             <div class="card-modern h-100 p-3 position-relative">
                 <span class="badge-custom-success badge-top-right">Temps plein</span>
@@ -99,7 +99,7 @@
                 <p>Rejoignez une équipe dynamique pour développer des applications web modernes.</p>
                 <div class="job-footer d-flex justify-content-between align-items-center mt-3">
                     <div class="job-date"><i class="bi bi-clock"></i> 10/12/2025</div>
-                    <button class="btn btn-outline-primary btn-modern">Voir l’offre</button>
+                    <a href="/Annonces/Details/1" class="btn btn-outline-primary btn-modern">Voir l’offre</a>
                 </div>
             </div>
         </div>
@@ -243,7 +243,12 @@
                 <p>Supervision des opérations de sécurité et contrôle sur le terrain.</p>
                 <div class="job-footer d-flex justify-content-between align-items-center mt-3">
                     <div class="job-date"><i class="bi bi-clock"></i> 02/12/2025</div>
-                    <button class="btn btn-outline-primary btn-modern">Voir l’offre</button>
+                    <a href="#" 
+                       class="btn btn-outline-primary btn-modern"
+                       onclick="event.preventDefault(); showErrorToast('Veuillez vous connecter pour voir cette offre');">
+                        Voir l’offre
+                    </a>
+
                 </div>
             </div>
         </div>
@@ -260,6 +265,24 @@
             <li class="page-item"><a class="page-link">›</a></li>
         </ul>
     </div>
+    
+    <!-- Toast erreur -->
+    <div id="toast-error" class="toast-error">
+        <i class="bi bi-exclamation-triangle"></i>
+        Veuillez vous connecter pour voir cette offre
+    </div>
 </div>
+<script>
+    function showErrorToast(message) {
+        const toast = document.getElementById('toast-error');
+        toast.innerHTML = `<i class="bi bi-exclamation-triangle"></i> ${message}`;
+        toast.classList.add('show');
+
+        setTimeout(() => {
+            toast.classList.remove('show');
+        }, 3000);
+    }
+</script>
+
 
 

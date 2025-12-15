@@ -1,4 +1,56 @@
-﻿/* Style moderne pour les cards */
+﻿.apply-wrapper {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    gap: 24px;
+}
+
+/* Colonne gauche */
+.apply-summary {
+    background: #f8f9ff;
+    border-radius: 14px;
+    padding: 20px;
+    height: fit-content;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.apply-summary h5 {
+    font-weight: 600;
+}
+
+.summary-item {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.summary-item i {
+    margin-right: 6px;
+    color: #4E73DF;
+}
+
+/* Colonne droite */
+.apply-form {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* Steps */
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+}
+
+.form-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+/* Style moderne pour les cards */
 .card-modern {
     border-radius: 16px;
     padding: 25px;
@@ -104,7 +156,7 @@
     background-color: #dc3545;
 }
 .card-modern {
-    position: relative; 
+    position: relative;
     padding: 1rem;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -149,14 +201,14 @@
 
 .results-bar {
     background-color: #ffffff;
-    border-radius: 12px;       
-    padding: 12px 16px;        
+    border-radius: 12px;
+    padding: 12px 16px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;       
-    flex-wrap: wrap;           
+    margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 .results-bar .results {

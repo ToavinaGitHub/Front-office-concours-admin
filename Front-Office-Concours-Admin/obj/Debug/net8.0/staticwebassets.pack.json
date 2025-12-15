@@ -13,6 +13,18 @@
       "PackagePath": "staticwebassets\\css\\animate.min.css"
     },
     {
+      "Id": "E:\\Master 2\\Gestion-concours-admin\\Front-Office-Concours-Admin\\Front-Office-Concours-Admin\\wwwroot\\css\\annonces.css",
+      "PackagePath": "staticwebassets\\css\\annonces.css"
+    },
+    {
+      "Id": "E:\\Master 2\\Gestion-concours-admin\\Front-Office-Concours-Admin\\Front-Office-Concours-Admin\\wwwroot\\css\\apply.css",
+      "PackagePath": "staticwebassets\\css\\apply.css"
+    },
+    {
+      "Id": "E:\\Master 2\\Gestion-concours-admin\\Front-Office-Concours-Admin\\Front-Office-Concours-Admin\\wwwroot\\css\\details_annonces.css",
+      "PackagePath": "staticwebassets\\css\\details_annonces.css"
+    },
+    {
       "Id": "E:\\Master 2\\Gestion-concours-admin\\Front-Office-Concours-Admin\\Front-Office-Concours-Admin\\wwwroot\\css\\font-awesome.min.css",
       "PackagePath": "staticwebassets\\css\\font-awesome.min.css"
     },

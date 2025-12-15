@@ -18,6 +18,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin
 build_property._RazorSourceGeneratorDebug = 
 
+[E:/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/Views/Annonces/Apply.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5ub25jZXNcQXBwbHkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/Views/Annonces/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5ub25jZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/Views/Annonces/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5ub25jZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

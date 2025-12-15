@@ -28,3 +28,4 @@ E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Conc
 E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\obj\Debug\net8.0\Front-Office-Concours-Admin.pdb
 E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\obj\Debug\net8.0\Front-Office-Concours-Admin.genruntimeconfig.cache
 E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\obj\Debug\net8.0\ref\Front-Office-Concours-Admin.dll
+E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\obj\Debug\net8.0\Front-Office-Concours-Admin.sourcelink.json

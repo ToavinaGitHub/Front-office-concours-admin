@@ -9,4 +9,14 @@ public class AnnoncesController : Controller
     {
         return View();
     }
+    
+    public IActionResult Details(int id)
+    { 
+        return View();
+    }
+
+    public IActionResult Apply(int id)
+    {
+        return View();
+    }
 }

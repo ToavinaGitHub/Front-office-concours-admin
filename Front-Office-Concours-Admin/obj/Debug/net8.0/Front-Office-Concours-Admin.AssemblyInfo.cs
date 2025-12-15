@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Front-Office-Concours-Admin")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4fc297145a7e98b81ecc6235326fe70a60d2956a")]
 [assembly: System.Reflection.AssemblyProductAttribute("Front-Office-Concours-Admin")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Front-Office-Concours-Admin")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
