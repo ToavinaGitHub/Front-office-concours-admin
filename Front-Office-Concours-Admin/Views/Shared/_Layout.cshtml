@@ -98,12 +98,12 @@
                         <a class="nav-link" asp-area="" asp-controller="Annonces" asp-action="Index">Annonces</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Mes candidature</a>
+                        <a class="nav-link" asp-area="" asp-controller="Candidature" asp-action="Index">Mes candidature</a>
                     </li>
                 </ul>
                 <div class="d-flex gap-2">
-                    <a class="btn btn-outline-light">S’inscrire</a>
-                    <a class="btn btn-signup">Se connecter</a>
+                    <a class="btn btn-outline-light" asp-controller="Auth"  asp-action="Register">S’inscrire</a>
+                    <a class="btn btn-signup" asp-controller="Auth" asp-action="Login" >Se connecter</a>
                 </div>
             </div>
 

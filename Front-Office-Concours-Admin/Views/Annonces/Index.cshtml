@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Front_Office_Concours_Admin.Models.AnnoncePagedViewModel
+@{
     ViewData["Title"] = "Recherche d'emploi";
 }
 
@@ -72,199 +73,88 @@
         <!-- Sélecteur nombre d'éléments -->
         <div class="d-flex align-items-center results">
             <label class="me-2 mb-0">Afficher :</label>
-            <select class="form-select form-select-sm" style="width: 80px;" name="pageSize">
-                <option value="6" selected>6</option>
-                <option value="9">9</option>
-                <option value="12">12</option>
-            </select>
+                    <form method="get" class="d-inline">
+                            <select class="form-select form-select-sm" style="width: 80px;" name="pageSize" onchange="this.form.submit()">
+                                @foreach (var size in new int[] {10, 25, 50})
+                                {
+                                    if (size == Model.PageSize)
+                                    {
+                                        <option value="@size" selected>@size</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="@size">@size</option>
+                                    }
+                                }
+                            </select>
+                            <input type="hidden" name="currentPage" value="@Model.CurrentPage" />
+                    </form>
+                
         </div>
 
-        <h6 class="mb-0">Page <strong>1</strong> sur <strong>3</strong></h6>
-        <h6 class="mb-0"><strong>12</strong> résultats</h6>
+        <h6 class="mb-0">
+            Page <strong>@Model.CurrentPage</strong> sur <strong>@Model.TotalPages</strong>
+        </h6>
+        <h6 class="mb-0">
+            <strong>@Model.TotalItems</strong> résultat(s)
+        </h6>
     </div>
+
 
     
     <div class="row g-4">
+        @foreach (var annonce in Model.Annonces)
+        {
+            <div class="col-md-4">
+                <div class="card-modern h-100 p-3 position-relative">
+                    <span class="badge-custom-@(annonce.TypeEmploi?.Libelle == "Temps plein" ? "success" : "warning") badge-top-right">
+                        @(annonce.TypeEmploi?.Libelle ?? "Non précisé")
+                    </span>
 
-        <!-- JOB 1 -->
-        <div class="col-md-4">
-            <div class="card-modern h-100 p-3 position-relative">
-                <span class="badge-custom-success badge-top-right">Temps plein</span>
-
-                <div class="job-card-title">Développeur Full Stack</div>
-                <div class="job-entity">
-                    <i class="bi bi-building"></i> Ministère de l’Éducation
-                </div>
-                <div class="job-location mb-2">Antananarivo - CDI</div>
-                <p>Rejoignez une équipe dynamique pour développer des applications web modernes.</p>
-                <div class="job-footer d-flex justify-content-between align-items-center mt-3">
-                    <div class="job-date"><i class="bi bi-clock"></i> 10/12/2025</div>
-                    <a href="/Annonces/Details/1" class="btn btn-outline-primary btn-modern">Voir l’offre</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- JOB 2 -->
-        <div class="col-md-4">
-            <div class="card-modern h-100 p-3 position-relative">
-                <span class="badge-custom-warning badge-top-right">Temps partiel</span>
-
-                <div class="job-card-title">Comptable Senior</div>
-                <div class="job-entity">
-                    <i class="bi bi-building"></i> Police Nationale
-                </div>
-                <div class="job-location mb-2">Tamatave - CDD</div>
-                <p>Assurez la gestion financière et comptable d’une administration publique.</p>
-                <div class="job-footer d-flex justify-content-between align-items-center mt-3">
-                    <div class="job-date"><i class="bi bi-clock"></i> 09/12/2025</div>
-                    <button class="btn btn-outline-primary btn-modern">Voir l’offre</button>
+                    <div class="job-card-title">@annonce.Titre</div>
+                    <div class="job-entity">
+                        <i class="bi bi-building"></i> @annonce.Entite?.Nom
+                    </div>
+                    <div class="job-location mb-2">
+                        @annonce.LieuPoste - @(@annonce.TypeContrat?.Libelle ?? "Non précisé")
+                    </div>
+                    <p>@annonce.Description</p>
+                    <div class="job-footer d-flex justify-content-between align-items-center mt-3">
+                        <div class="job-date"><i class="bi bi-clock"></i> @annonce.DateLimiteDepotDossier.ToString("dd/MM/yyyy")</div>
+                        <a href="@Url.Action("Details", "Annonces", new { id = annonce.Id })" 
+                           class="btn btn-outline-primary btn-modern">
+                            Voir l’offre
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <!-- JOB 3 -->
-        <div class="col-md-4">
-            <div class="card-modern h-100 p-3 position-relative">
-                <span class="badge-custom-success badge-top-right">Temps plein</span>
-
-                <div class="job-card-title">Chef de Projet</div>
-                <div class="job-entity">
-                    <i class="bi bi-building"></i> Ministère de la Santé
-                </div>
-                <div class="job-location mb-2">Antsirabe - CDI</div>
-                <p>Coordonnez et pilotez des projets innovants dans un cadre stimulant.</p>
-                <div class="job-footer d-flex justify-content-between align-items-center mt-3">
-                    <div class="job-date"><i class="bi bi-clock"></i> 08/12/2025</div>
-                    <button class="btn btn-outline-primary btn-modern">Voir l’offre</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- JOB 4 -->
-        <div class="col-md-4">
-            <div class="card-modern h-100 p-3 position-relative">
-                <span class="badge-custom-warning badge-top-right">Temps partiel</span>
-
-                <div class="job-card-title">Technicien Informatique</div>
-                <div class="job-entity">
-                    <i class="bi bi-building"></i> Ministère de la Défense
-                </div>
-                <div class="job-location mb-2">Mahajanga - CDD</div>
-                <p>Maintenance et gestion des systèmes informatiques pour le ministère.</p>
-                <div class="job-footer d-flex justify-content-between align-items-center mt-3">
-                    <div class="job-date"><i class="bi bi-clock"></i> 07/12/2025</div>
-                    <button class="btn btn-outline-primary btn-modern">Voir l’offre</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- JOB 5 -->
-        <div class="col-md-4">
-            <div class="card-modern h-100 p-3 position-relative">
-                <span class="badge-custom-success badge-top-right">Temps plein</span>
-
-                <div class="job-card-title">Assistant Administratif</div>
-                <div class="job-entity">
-                    <i class="bi bi-building"></i> Ministère de l’Intérieur
-                </div>
-                <div class="job-location mb-2">Fianarantsoa - CDI</div>
-                <p>Gestion administrative et suivi des dossiers au sein du ministère.</p>
-                <div class="job-footer d-flex justify-content-between align-items-center mt-3">
-                    <div class="job-date"><i class="bi bi-clock"></i> 06/12/2025</div>
-                    <button class="btn btn-outline-primary btn-modern">Voir l’offre</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- JOB 6 -->
-        <div class="col-md-4">
-            <div class="card-modern h-100 p-3 position-relative">
-                <span class="badge-custom-warning badge-top-right">Temps partiel</span>
-
-                <div class="job-card-title">Chargé de Communication</div>
-                <div class="job-entity">
-                    <i class="bi bi-building"></i> Police Municipale
-                </div>
-                <div class="job-location mb-2">Antsiranana - CDD</div>
-                <p>Développement de la communication interne et externe de la municipalité.</p>
-                <div class="job-footer d-flex justify-content-between align-items-center mt-3">
-                    <div class="job-date"><i class="bi bi-clock"></i> 05/12/2025</div>
-                    <button class="btn btn-outline-primary btn-modern">Voir l’offre</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- JOB 7 -->
-        <div class="col-md-4">
-            <div class="card-modern h-100 p-3 position-relative">
-                <span class="badge-custom-success badge-top-right">Temps plein</span>
-
-                <div class="job-card-title">Analyste de Données</div>
-                <div class="job-entity">
-                    <i class="bi bi-building"></i> Ministère des Transports
-                </div>
-                <div class="job-location mb-2">Toliara - CDI</div>
-                <p>Analyse des données publiques pour améliorer les services aux citoyens.</p>
-                <div class="job-footer d-flex justify-content-between align-items-center mt-3">
-                    <div class="job-date"><i class="bi bi-clock"></i> 04/12/2025</div>
-                    <button class="btn btn-outline-primary btn-modern">Voir l’offre</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- JOB 8 -->
-        <div class="col-md-4">
-            <div class="card-modern h-100 p-3 position-relative">
-                <span class="badge-custom-warning badge-top-right">Temps partiel</span>
-
-                <div class="job-card-title">Agent d’Accueil</div>
-                <div class="job-entity">
-                    <i class="bi bi-building"></i> Ministère de la Culture
-                </div>
-                <div class="job-location mb-2">Sambava - CDD</div>
-                <p>Accueil et orientation des visiteurs dans les services culturels.</p>
-                <div class="job-footer d-flex justify-content-between align-items-center mt-3">
-                    <div class="job-date"><i class="bi bi-clock"></i> 03/12/2025</div>
-                    <button class="btn btn-outline-primary btn-modern">Voir l’offre</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- JOB 9 -->
-        <div class="col-md-4">
-            <div class="card-modern h-100 p-3 position-relative">
-                <span class="badge-custom-success badge-top-right">Temps plein</span>
-
-                <div class="job-card-title">Inspecteur</div>
-                <div class="job-entity">
-                    <i class="bi bi-building"></i> Gendarmerie Nationale
-                </div>
-                <div class="job-location mb-2">Morondava - CDI</div>
-                <p>Supervision des opérations de sécurité et contrôle sur le terrain.</p>
-                <div class="job-footer d-flex justify-content-between align-items-center mt-3">
-                    <div class="job-date"><i class="bi bi-clock"></i> 02/12/2025</div>
-                    <a href="#" 
-                       class="btn btn-outline-primary btn-modern"
-                       onclick="event.preventDefault(); showErrorToast('Veuillez vous connecter pour voir cette offre');">
-                        Voir l’offre
-                    </a>
-
-                </div>
-            </div>
-        </div>
-
+        }
     </div>
+
     
     <!-- PAGINATION + SELECT ITEMS PER PAGE -->
     <div class="d-flex justify-content-end mt-4">
         <ul class="pagination pagination-circle mb-0">
-            <li class="page-item disabled"><a class="page-link">‹</a></li>
-            <li class="page-item active"><a class="page-link">1</a></li>
-            <li class="page-item"><a class="page-link">2</a></li>
-            <li class="page-item"><a class="page-link">3</a></li>
-            <li class="page-item"><a class="page-link">›</a></li>
+            <!-- Bouton page précédente -->
+            <li class="page-item @(Model.CurrentPage == 1 ? "disabled" : "")">
+                <a class="page-link" href="@Url.Action("Index", new { currentPage = Model.CurrentPage - 1 })">‹</a>
+            </li>
+
+            <!-- Pages numérotées -->
+            @for (int i = 1; i <= Model.TotalPages; i++)
+            {
+                <li class="page-item @(i == Model.CurrentPage ? "active" : "")">
+                    <a class="page-link" href="@Url.Action("Index", new { currentPage = i })">@i</a>
+                </li>
+            }
+
+            <!-- Bouton page suivante -->
+            <li class="page-item @(Model.CurrentPage == Model.TotalPages ? "disabled" : "")">
+                <a class="page-link" href="@Url.Action("Index", new { currentPage = Model.CurrentPage + 1 })">›</a>
+            </li>
         </ul>
     </div>
+
     
     <!-- Toast erreur -->
     <div id="toast-error" class="toast-error">

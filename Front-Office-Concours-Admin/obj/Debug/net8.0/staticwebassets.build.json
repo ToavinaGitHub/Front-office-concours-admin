@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UJ+Po+mCWx9acD/PGpQbF3ubF17IC3DqLRBLQLPqugU=",
+  "Hash": "yRd1XV65Kh0jK+5sHaSRBo7XCcBBumIcq5jRwPjwv6o=",
   "Source": "Front-Office-Concours-Admin",
   "BasePath": "_content/Front-Office-Concours-Admin",
   "Mode": "Default",
@@ -112,6 +112,25 @@
       "OriginalItemSpec": "wwwroot\\css\\apply.css"
     },
     {
+      "Identity": "E:\\Master 2\\Gestion-concours-admin\\Front-Office-Concours-Admin\\Front-Office-Concours-Admin\\wwwroot\\css\\candidatures.css",
+      "SourceId": "Front-Office-Concours-Admin",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Master 2\\Gestion-concours-admin\\Front-Office-Concours-Admin\\Front-Office-Concours-Admin\\wwwroot\\",
+      "BasePath": "_content/Front-Office-Concours-Admin",
+      "RelativePath": "css/candidatures.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\candidatures.css"
+    },
+    {
       "Identity": "E:\\Master 2\\Gestion-concours-admin\\Front-Office-Concours-Admin\\Front-Office-Concours-Admin\\wwwroot\\css\\details_annonces.css",
       "SourceId": "Front-Office-Concours-Admin",
       "SourceType": "Discovered",
@@ -129,6 +148,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\details_annonces.css"
+    },
+    {
+      "Identity": "E:\\Master 2\\Gestion-concours-admin\\Front-Office-Concours-Admin\\Front-Office-Concours-Admin\\wwwroot\\css\\details_candidature.css",
+      "SourceId": "Front-Office-Concours-Admin",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Master 2\\Gestion-concours-admin\\Front-Office-Concours-Admin\\Front-Office-Concours-Admin\\wwwroot\\",
+      "BasePath": "_content/Front-Office-Concours-Admin",
+      "RelativePath": "css/details_candidature.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\details_candidature.css"
     },
     {
       "Identity": "E:\\Master 2\\Gestion-concours-admin\\Front-Office-Concours-Admin\\Front-Office-Concours-Admin\\wwwroot\\css\\font-awesome.min.css",
@@ -167,6 +205,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\linearicons.css"
+    },
+    {
+      "Identity": "E:\\Master 2\\Gestion-concours-admin\\Front-Office-Concours-Admin\\Front-Office-Concours-Admin\\wwwroot\\css\\login.css",
+      "SourceId": "Front-Office-Concours-Admin",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Master 2\\Gestion-concours-admin\\Front-Office-Concours-Admin\\Front-Office-Concours-Admin\\wwwroot\\",
+      "BasePath": "_content/Front-Office-Concours-Admin",
+      "RelativePath": "css/login.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\login.css"
     },
     {
       "Identity": "E:\\Master 2\\Gestion-concours-admin\\Front-Office-Concours-Admin\\Front-Office-Concours-Admin\\wwwroot\\css\\magnific-popup.css",
@@ -243,6 +300,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\owl.carousel.css"
+    },
+    {
+      "Identity": "E:\\Master 2\\Gestion-concours-admin\\Front-Office-Concours-Admin\\Front-Office-Concours-Admin\\wwwroot\\css\\signin.css",
+      "SourceId": "Front-Office-Concours-Admin",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Master 2\\Gestion-concours-admin\\Front-Office-Concours-Admin\\Front-Office-Concours-Admin\\wwwroot\\",
+      "BasePath": "_content/Front-Office-Concours-Admin",
+      "RelativePath": "css/signin.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\signin.css"
     },
     {
       "Identity": "E:\\Master 2\\Gestion-concours-admin\\Front-Office-Concours-Admin\\Front-Office-Concours-Admin\\wwwroot\\css\\site.css",

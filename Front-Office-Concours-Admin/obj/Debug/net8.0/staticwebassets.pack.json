@@ -21,8 +21,16 @@
       "PackagePath": "staticwebassets\\css\\apply.css"
     },
     {
+      "Id": "E:\\Master 2\\Gestion-concours-admin\\Front-Office-Concours-Admin\\Front-Office-Concours-Admin\\wwwroot\\css\\candidatures.css",
+      "PackagePath": "staticwebassets\\css\\candidatures.css"
+    },
+    {
       "Id": "E:\\Master 2\\Gestion-concours-admin\\Front-Office-Concours-Admin\\Front-Office-Concours-Admin\\wwwroot\\css\\details_annonces.css",
       "PackagePath": "staticwebassets\\css\\details_annonces.css"
+    },
+    {
+      "Id": "E:\\Master 2\\Gestion-concours-admin\\Front-Office-Concours-Admin\\Front-Office-Concours-Admin\\wwwroot\\css\\details_candidature.css",
+      "PackagePath": "staticwebassets\\css\\details_candidature.css"
     },
     {
       "Id": "E:\\Master 2\\Gestion-concours-admin\\Front-Office-Concours-Admin\\Front-Office-Concours-Admin\\wwwroot\\css\\font-awesome.min.css",
@@ -31,6 +39,10 @@
     {
       "Id": "E:\\Master 2\\Gestion-concours-admin\\Front-Office-Concours-Admin\\Front-Office-Concours-Admin\\wwwroot\\css\\linearicons.css",
       "PackagePath": "staticwebassets\\css\\linearicons.css"
+    },
+    {
+      "Id": "E:\\Master 2\\Gestion-concours-admin\\Front-Office-Concours-Admin\\Front-Office-Concours-Admin\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
     },
     {
       "Id": "E:\\Master 2\\Gestion-concours-admin\\Front-Office-Concours-Admin\\Front-Office-Concours-Admin\\wwwroot\\css\\magnific-popup.css",
@@ -47,6 +59,10 @@
     {
       "Id": "E:\\Master 2\\Gestion-concours-admin\\Front-Office-Concours-Admin\\Front-Office-Concours-Admin\\wwwroot\\css\\owl.carousel.css",
       "PackagePath": "staticwebassets\\css\\owl.carousel.css"
+    },
+    {
+      "Id": "E:\\Master 2\\Gestion-concours-admin\\Front-Office-Concours-Admin\\Front-Office-Concours-Admin\\wwwroot\\css\\signin.css",
+      "PackagePath": "staticwebassets\\css\\signin.css"
     },
     {
       "Id": "E:\\Master 2\\Gestion-concours-admin\\Front-Office-Concours-Admin\\Front-Office-Concours-Admin\\wwwroot\\css\\site.css",

@@ -29,3 +29,11 @@ E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Conc
 E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\obj\Debug\net8.0\Front-Office-Concours-Admin.genruntimeconfig.cache
 E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\obj\Debug\net8.0\ref\Front-Office-Concours-Admin.dll
 E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\obj\Debug\net8.0\Front-Office-Concours-Admin.sourcelink.json
+E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\System.Data.SqlClient.dll
+E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\runtimes\win-arm64\native\sni.dll
+E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\runtimes\win-x64\native\sni.dll
+E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
+E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\runtimes\unix\lib\net8.0\System.Data.SqlClient.dll
+E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
+E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\obj\Debug\net8.0\Front-Office-Concours-Admin.csproj.AssemblyReference.cache
+E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\obj\Debug\net8.0\Front-Of.DB199D6E.Up2Date

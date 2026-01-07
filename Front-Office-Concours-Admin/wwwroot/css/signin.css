@@ -1,0 +1,39 @@
+﻿body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #b9d6ff, #6610f2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto;
+}
+
+.register-card {
+    background: #fff;
+    width: 100%;
+    max-width: 460px;
+    border-radius: 14px;
+    padding: 32px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.register-title {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.register-subtitle {
+    font-size: 14px;
+    color: #6c757d;
+    margin-bottom: 24px;
+}
+
+.form-control {
+    height: 46px;
+    border-radius: 10px;
+}
+
+.btn-register {
+    height: 46px;
+    border-radius: 10px;
+    font-weight: 500;
+}
