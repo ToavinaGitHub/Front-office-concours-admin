@@ -7,4 +7,7 @@ public interface IAnnonceRepository
     AnnoncePagedViewModel GetPagedAnnonces(
         int currentPage,
         int pageSize);
+    
+    AnnoncePagedViewModel GetPagedAnnoncesByIds (
+        List<int> ids,int currentPage,int pageSize);
 }

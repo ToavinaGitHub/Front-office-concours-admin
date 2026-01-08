@@ -1,4 +1,6 @@
+using Front_Office_Concours_Admin.Models;
 using Front_Office_Concours_Admin.Repository;
+using Front_Office_Concours_Admin.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,8 +11,30 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton<IConfiguration>(builder.Configuration);
 
 builder.Services.AddScoped<IAnnonceRepository, AnnonceRepository>();
+builder.Services.AddSingleton<ElasticSearchService>();
+
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var repo = scope.ServiceProvider.GetRequiredService<IAnnonceRepository>();
+    var elastic = scope.ServiceProvider.GetRequiredService<ElasticSearchService>();
+
+    int page = 1, pageSize = 100;
+    AnnoncePagedViewModel annoncesBatch;
+
+    do
+    {
+        annoncesBatch = repo.GetPagedAnnonces(page, pageSize);
+        foreach (var annonce in annoncesBatch.Annonces)
+        {
+            elastic.IndexAnnonce(annonce); 
+        }
+        page++;
+    } while (annoncesBatch.Annonces.Count > 0);
+}
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

@@ -4,11 +4,10 @@
 }
 
 <link rel="stylesheet" href="~/css/annonces.css" asp-append-version="true" />
-<!-- Bootstrap Icons pour la flèche -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
 <div class="container mt-4">
-    
+
     <!-- 🔍 Formulaire de recherche -->
     <div class="search-card mb-1">
         <form method="get">
@@ -16,22 +15,34 @@
 
                 <div class="col-md-4">
                     <label class="form-label">Titre du poste</label>
-                    <input class="form-control" name="title" placeholder="Ex: Développeur, Comptable..." />
+                    <input class="form-control" name="title" placeholder="Ex: Développeur, Comptable..."
+                           value="@ViewBag.TitleFilter" />
                 </div>
 
                 <div class="col-md-4">
                     <label class="form-label">Lieu</label>
-                    <input class="form-control" name="location" placeholder="Ex: Antananarivo, Tamatave" />
+                    <input class="form-control" name="location" placeholder="Ex: Antananarivo, Tamatave"
+                           value="@ViewBag.LocationFilter" />
                 </div>
 
                 <div class="col-md-4">
                     <label class="form-label">Type de contrat</label>
                     <select class="form-select" name="typeContrat">
                         <option value="">Tous</option>
-                        <option>CDI</option>
-                        <option>CDD</option>
-                        <option>Stage</option>
-                        <option>Freelance</option>
+                        @{
+                            var tcOptions = new[] { "CDI", "CDD", "Stage", "Freelance" };
+                            foreach (var tc in tcOptions)
+                            {
+                                if ((ViewBag.TypeContratFilter as string) == tc)
+                                {
+                                    <option value="@tc" selected>@tc</option>
+                                }
+                                else
+                                {
+                                    <option value="@tc">@tc</option>
+                                }
+                            }
+                        }
                     </select>
                 </div>
 
@@ -39,12 +50,20 @@
                     <label class="form-label">Diplôme requis</label>
                     <select class="form-select" name="diplome">
                         <option value="">Tous</option>
-                        <option>CEPE</option>
-                        <option>BEPC</option>
-                        <option>BACC</option>
-                        <option>Licence</option>
-                        <option>Master</option>
-                        <option>Doctorat</option>
+                        @{
+                            var diplomeOptions = new[] { "CEPE", "BEPC", "BACC", "Licence", "Master", "Doctorat" };
+                            foreach (var d in diplomeOptions)
+                            {
+                                if ((ViewBag.DiplomeFilter as string) == d)
+                                {
+                                    <option value="@d" selected>@d</option>
+                                }
+                                else
+                                {
+                                    <option value="@d">@d</option>
+                                }
+                            }
+                        }
                     </select>
                 </div>
 
@@ -52,44 +71,51 @@
                     <label class="form-label">Durée de travail</label>
                     <select class="form-select" name="horaire">
                         <option value="">Tous</option>
-                        <option>Temps plein</option>
-                        <option>Temps partiel</option>
+                        @{
+                            var horaireOptions = new[] { "Temps plein", "Temps partiel" };
+                            foreach (var h in horaireOptions)
+                            {
+                                if ((ViewBag.HoraireFilter as string) == h)
+                                {
+                                    <option value="@h" selected>@h</option>
+                                }
+                                else
+                                {
+                                    <option value="@h">@h</option>
+                                }
+                            }
+                        }
                     </select>
                 </div>
 
                 <div class="col-12 text-end mt-3">
-                    <button type="submit" class="btn btn-primary btn-modern">
-                        Rechercher
-                    </button>
+                    <button type="submit" class="btn btn-primary btn-modern">Rechercher</button>
                 </div>
 
             </div>
         </form>
     </div>
-    
 
     <!-- 📄 Liste des jobs -->
     <div class="results-bar">
-        <!-- Sélecteur nombre d'éléments -->
         <div class="d-flex align-items-center results">
             <label class="me-2 mb-0">Afficher :</label>
-                    <form method="get" class="d-inline">
-                            <select class="form-select form-select-sm" style="width: 80px;" name="pageSize" onchange="this.form.submit()">
-                                @foreach (var size in new int[] {10, 25, 50})
-                                {
-                                    if (size == Model.PageSize)
-                                    {
-                                        <option value="@size" selected>@size</option>
-                                    }
-                                    else
-                                    {
-                                        <option value="@size">@size</option>
-                                    }
-                                }
-                            </select>
-                            <input type="hidden" name="currentPage" value="@Model.CurrentPage" />
-                    </form>
-                
+            <form method="get" class="d-inline">
+                <select class="form-select form-select-sm" style="width: 80px;" name="pageSize" onchange="this.form.submit()">
+                    @foreach (var size in new int[] {10, 25, 50})
+                    {
+                        if (size == Model.PageSize)
+                        {
+                            <option value="@size" selected>@size</option>
+                        }
+                        else
+                        {
+                            <option value="@size">@size</option>
+                        }
+                    }
+                </select>
+                <input type="hidden" name="currentPage" value="@Model.CurrentPage" />
+            </form>
         </div>
 
         <h6 class="mb-0">
@@ -100,8 +126,6 @@
         </h6>
     </div>
 
-
-    
     <div class="row g-4">
         @foreach (var annonce in Model.Annonces)
         {
@@ -122,57 +146,42 @@
                     <div class="job-footer d-flex justify-content-between align-items-center mt-3">
                         <div class="job-date"><i class="bi bi-clock"></i> @annonce.DateLimiteDepotDossier.ToString("dd/MM/yyyy")</div>
                         <a href="@Url.Action("Details", "Annonces", new { id = annonce.Id })" 
-                           class="btn btn-outline-primary btn-modern">
-                            Voir l’offre
-                        </a>
+                           class="btn btn-outline-primary btn-modern">Voir l’offre</a>
                     </div>
                 </div>
             </div>
         }
     </div>
 
-    
     <!-- PAGINATION + SELECT ITEMS PER PAGE -->
     <div class="d-flex justify-content-end mt-4">
         <ul class="pagination pagination-circle mb-0">
-            <!-- Bouton page précédente -->
             <li class="page-item @(Model.CurrentPage == 1 ? "disabled" : "")">
                 <a class="page-link" href="@Url.Action("Index", new { currentPage = Model.CurrentPage - 1 })">‹</a>
             </li>
-
-            <!-- Pages numérotées -->
             @for (int i = 1; i <= Model.TotalPages; i++)
             {
                 <li class="page-item @(i == Model.CurrentPage ? "active" : "")">
                     <a class="page-link" href="@Url.Action("Index", new { currentPage = i })">@i</a>
                 </li>
             }
-
-            <!-- Bouton page suivante -->
             <li class="page-item @(Model.CurrentPage == Model.TotalPages ? "disabled" : "")">
                 <a class="page-link" href="@Url.Action("Index", new { currentPage = Model.CurrentPage + 1 })">›</a>
             </li>
         </ul>
     </div>
 
-    
-    <!-- Toast erreur -->
     <div id="toast-error" class="toast-error">
         <i class="bi bi-exclamation-triangle"></i>
         Veuillez vous connecter pour voir cette offre
     </div>
 </div>
+
 <script>
-    function showErrorToast(message) {
-        const toast = document.getElementById('toast-error');
-        toast.innerHTML = `<i class="bi bi-exclamation-triangle"></i> ${message}`;
-        toast.classList.add('show');
-
-        setTimeout(() => {
-            toast.classList.remove('show');
-        }, 3000);
-    }
+function showErrorToast(message) {
+    const toast = document.getElementById('toast-error');
+    toast.innerHTML = `<i class="bi bi-exclamation-triangle"></i> ${message}`;
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 3000);
+}
 </script>
-
-
-
