@@ -39,3 +39,15 @@ E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Conc
 E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\obj\Debug\net8.0\Front-Of.DB199D6E.Up2Date
 E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\Elasticsearch.Net.dll
 E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\Nest.dll
+E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
+E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\Microsoft.Extensions.WebEncoders.dll
+E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\System.Security.Cryptography.Xml.dll
+E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll

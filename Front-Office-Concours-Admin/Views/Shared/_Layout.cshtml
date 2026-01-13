@@ -101,10 +101,39 @@
                         <a class="nav-link" asp-area="" asp-controller="Candidature" asp-action="Index">Mes candidature</a>
                     </li>
                 </ul>
-                <div class="d-flex gap-2">
-                    <a class="btn btn-outline-light" asp-controller="Auth"  asp-action="Register">S’inscrire</a>
-                    <a class="btn btn-signup" asp-controller="Auth" asp-action="Login" >Se connecter</a>
+                @{
+                    var candidatNom = Context.Session.GetString("CandidatNom");
+                    var candidatPrenom = Context.Session.GetString("CandidatPrenom");
+                }
+
+                <div class="d-flex gap-2 align-items-center">
+                    @if (!string.IsNullOrEmpty(candidatNom) && !string.IsNullOrEmpty(candidatPrenom))
+                    {
+                        <div class="dropdown">
+                            <button class="btn btn-primary rounded-circle fw-bold" 
+                                    type="button" id="userDropdown" data-bs-toggle="dropdown" 
+                                    aria-expanded="false"
+                                    style="width:45px; height:40px;">
+                                @{
+                                    // Prendre la première lettre du prénom et du nom
+                                    var initials = (candidatPrenom[0].ToString() + candidatNom[0].ToString()).ToUpper();
+                                }
+                                @initials
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                <li>
+                                    <a class="dropdown-item" asp-controller="Auth" asp-action="Logout">Se déconnecter</a>
+                                </li>
+                            </ul>
+                        </div>
+                    }
+                    else
+                    {
+                        <a class="btn btn-outline-light" asp-controller="Auth" asp-action="Register">S’inscrire</a>
+                        <a class="btn btn-signup" asp-controller="Auth" asp-action="Login">Se connecter</a>
+                    }
                 </div>
+
             </div>
 
         </div>

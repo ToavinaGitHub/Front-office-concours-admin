@@ -35,7 +35,7 @@
                 <div class="login-subtitle">Accédez à votre espace personnel</div>
             </div>
 
-            <form method="post">
+            <form asp-controller="Auth" asp-action="Login" method="post">
 
                 <!-- Email -->
                 <div class="mb-3">
@@ -47,6 +47,7 @@
                         <input type="email"
                                class="form-control"
                                placeholder="exemple@email.com"
+                               name="Email"
                                required />
                     </div>
                 </div>
@@ -61,13 +62,14 @@
                         <input type="password"
                                class="form-control"
                                placeholder="••••••••"
+                               name="MotDePasse"
                                required />
                     </div>
                 </div>
 
                 <div class="d-flex justify-content-between align-items-center mb-4">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="rememberMe">
+                        <input class="form-check-input" type="checkbox" id="rememberMe" name="rememberMe">
                         <label class="form-check-label" for="rememberMe">
                             Se souvenir de moi
                         </label>
@@ -81,9 +83,18 @@
                 <button type="submit" class="btn btn-primary w-100 btn-login">
                     Se connecter
                 </button>
+                @if(ViewBag.Error != null)
+                {
+                    <div class="alert alert-danger mt-2">@ViewBag.Error</div>
+                }
 
             </form>
-
+            <div class="text-center mt-3">
+                <span class="text-muted">Pas encore de compte ?</span>
+                <a asp-controller="Auth" asp-action="Register" class="text-success fw-medium">
+                    S'inscrire
+                </a>
+            </div>
         </div>
 
     </div>

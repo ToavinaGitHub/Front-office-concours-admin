@@ -1,4 +1,6 @@
-﻿@{
+﻿@model Front_Office_Concours_Admin.Models.InscriptionViewModel
+
+@{
     Layout = null;
 }
 
@@ -8,7 +10,6 @@
     <meta charset="utf-8" />
     <title>Inscription</title>
 
-    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link href="~/css/signin.css" rel="stylesheet"/>
@@ -24,26 +25,71 @@
         <div class="register-subtitle">Inscrivez-vous pour continuer</div>
     </div>
 
-    <form method="post">
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger">@ViewBag.Error</div>
+    }
 
-        <div class="mb-3">
-            <label class="form-label">Nom complet</label>
-            <input type="text" class="form-control" placeholder="Votre nom" required>
+    <form asp-controller="Candidat"
+          asp-action="Inscription"
+          method="post">
+
+        <!-- Nom + Prénom -->
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label class="form-label">Nom</label>
+                <input name="Nom" type="text" class="form-control" asp-for="Nom" required>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Prénom</label>
+                <input name="Prenom" type="text" class="form-control" asp-for="Prenom" required>
+            </div>
         </div>
 
+        <!-- Date naissance + Genre -->
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label class="form-label">Date de naissance</label>
+                <input name="DateNaissance" type="date" class="form-control" asp-for="DateNaissance" required>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Genre</label>
+                <select name="Genre" class="form-select">
+                    <option value="M">Masculin</option>
+                    <option value="F">Féminin</option>
+                    <option value="N">Non genré</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Adresse + Téléphone -->
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label class="form-label">Adresse</label>
+                <input name="Adresse" type="text" class="form-control"  asp-for="Adresse" required>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Numéro téléphone</label>
+                <input name="Telephone" type="text" class="form-control" asp-for="Telephone" required>
+            </div>
+        </div>
+
+        <!-- Email -->
         <div class="mb-3">
             <label class="form-label">Adresse email</label>
-            <input type="email" class="form-control" placeholder="exemple@email.com" required>
+            <input name="Email" type="email" class="form-control" asp-for="Email" required>
         </div>
 
-        <div class="mb-3">
-            <label class="form-label">Mot de passe</label>
-            <input type="password" class="form-control" placeholder="••••••••" required>
-        </div>
-
-        <div class="mb-4">
-            <label class="form-label">Confirmer le mot de passe</label>
-            <input type="password" class="form-control" placeholder="••••••••" required>
+        <!-- Mot de passe -->
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <label class="form-label">Mot de passe</label>
+                <input name="MotDePasse" type="password" class="form-control" asp-for="MotDePasse" required>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Confirmer</label>
+                <input name="ConfirmMotDePasse" type="password" class="form-control" asp-for="ConfirmMotDePasse" required>
+            </div>
         </div>
 
         <button type="submit" class="btn btn-primary w-100 btn-register">
@@ -60,6 +106,5 @@
     </div>
 
 </div>
-
 </body>
 </html>

@@ -1,176 +1,124 @@
-﻿@{
-    ViewData["Title"] = "Recherche d'emploi";
+﻿@model List<Front_Office_Concours_Admin.Models.Candidature>
+
+@{
+    ViewData["Title"] = "Mes candidatures";
+    var keyword = ViewData["Keyword"]?.ToString() ?? "";
+    var typeContrat = ViewData["TypeContrat"]?.ToString() ?? "";
+    int pageNumber = (int)ViewData["PageNumber"];
+    int pageSize = (int)ViewData["PageSize"];
+    int totalCount = (int)ViewData["TotalCount"];
+    int totalPages = (int)Math.Ceiling(totalCount / (double)pageSize);
 }
 
-<link rel="stylesheet" href="~/css/annonces.css"/>
-<link rel="stylesheet" href="~/css/candidatures.css" asp-append-version="true" />
-<!-- Bootstrap Icons pour la flèche -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-
 <div class="container mt-4">
-    
-    <!-- 🔍 Formulaire de recherche -->
-    <div class="search-card mb-1 row">
+
+    <!-- Formulaire recherche -->
+    <div class="search-card mb-3 row">
         <form method="get">
             <div class="row">
                 <div class="col-md-5 filter-col">
-                    <input class="form-control" name="location" placeholder="Recherche par poste,lieu,type,date,..."/>
+                    <input class="form-control" name="keyword" placeholder="Recherche par poste, lieu..."
+                           value="@keyword" />
                 </div>
 
                 <div class="col-md-5 filter-col">
                     <select class="form-select" name="typeContrat">
                         <option value="">Tous</option>
-                        <option>CDI</option>
-                        <option>CDD</option>
-                        <option>Stage</option>
-                        <option>Freelance</option>
+                        @{
+                        var typeContrats = ViewBag.TypeContrats as List<Front_Office_Concours_Admin.Models.TypeContrat>;
+                        foreach (var tc in typeContrats)
+                        {
+                        if (tc.Id == (ViewData["TypeContratFilter"] as int?))
+                        {
+                        <option value="@tc.Id" selected>@tc.Libelle</option>
+                        }
+                        else
+                        {
+                        <option value="@tc.Id">@tc.Libelle</option>
+                        }
+                        }
+                        }
                     </select>
                 </div>
-                
-                <div class="col-md-2 filter-col">
-                    <button type="submit" class="btn btn-primary btn-modern">
-                        Rechercher
-                    </button>
-                </div>
 
+
+                <div class="col-md-2 filter-col">
+                    <button type="submit" class="btn btn-primary btn-modern">Rechercher</button>
+                </div>
             </div>
         </form>
     </div>
-    
 
-    <!-- 📄 Liste des jobs -->
-    <div class="results-bar">
-        <!-- Sélecteur nombre d'éléments -->
-        <div class="d-flex align-items-center results">
-            <label class="me-2 mb-0">Afficher :</label>
-            <select class="form-select form-select-sm" style="width: 80px;" name="pageSize">
-                <option value="6" selected>6</option>
-                <option value="9">9</option>
-                <option value="12">12</option>
-            </select>
-        </div>
-
-        <h6 class="mb-0">Page <strong>1</strong> sur <strong>3</strong></h6>
-        <h6 class="mb-0"><strong>12</strong> résultats</h6>
-    </div>
-    
+    <!-- Tableau candidatures -->
     <div class="card mt-4">
         <div class="table-responsive">
             <table class="table table-hover align-middle mb-0">
-                <thead class="table">
-                <tr>
-                    <th>Poste</th>
-                    <th>Entreprise</th>
-                    <th>Lieu</th>
-                    <th>Type</th>
-                    <th>Date de candidature</th>
-                    <th>Statut</th>
-                    <th></th>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>Poste</th>
+                        <th>Entreprise</th>
+                        <th>Lieu</th>
+                        <th>Type</th>
+                        <th>Date de candidature</th>
+                        <th>Statut</th>
+                        <th></th>
+                    </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td><strong>Développeur Web</strong></td>
-                    <td>Tech Solutions</td>
-                    <td>Antananarivo</td>
-                    <td>
-                        <span class="badge bg-info">CDI</span>
-                    </td>
-                    <td>05/12/2025</td>
-                    <td>
-                        <span class="badge bg-warning text-dark">En attente</span>
-                    </td>
-                    <td>
-                        <span
-                            class="arrow-action"
-                            data-bs-toggle="tooltip"
-                            data-bs-placement="top"
-                            title="Aller au détail">
-                            <a href="/Candidature/Details/1">
-                                <i class="bi bi-arrow-right"></i>
-                            </a>
-                        </span>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td><strong>Comptable Junior</strong></td>
-                    <td>Finance Plus</td>
-                    <td>Tamatave</td>
-                    <td>
-                        <span class="badge bg-primary">CDD</span>
-                    </td>
-                    <td>28/11/2025</td>
-                    <td>
-                        <span class="badge bg-success">Accepté</span>
-                    </td>
-                    <td>
-                        <span
-                            class="arrow-action"
-                            data-bs-toggle="tooltip"
-                            data-bs-placement="top"
-                            title="Aller au détail"
-                        >
-                            <a href="/Candidature/Details/1">
-                                <i class="bi bi-arrow-right"></i>
-                            </a>
-                        </span>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td><strong>Assistant RH</strong></td>
-                    <td>HumanCorp</td>
-                    <td>Fianarantsoa</td>
-                    <td>
-                        <span class="badge bg-secondary">Stage</span>
-                    </td>
-                    <td>15/11/2025</td>
-                    <td>
-                        <span class="badge bg-danger">Refusé</span>
-                    </td>
-                    <td>
-                        <span
-                            class="arrow-action"
-                            data-bs-toggle="tooltip"
-                            data-bs-placement="top"
-                            title="Aller au détail"
-                        >
-                            <a href="/Candidature/Details/1">
-                                <i class="bi bi-arrow-right"></i>
-                            </a>
-                        </span>
-                    </td>
-                </tr>
+                    @foreach (var c in Model)
+                    {
+                        <tr>
+                            <td><strong>@c.Annonce.Titre</strong></td>
+                            <td>@c.Annonce.Entite.Nom</td>
+                            <td>@c.Annonce.LieuPoste</td>
+                            <td>
+                                <span class="badge bg-info">@c.Annonce.TypeContrat.Libelle</span>
+                            </td>
+                            <td>@c.DateCreation.ToString("dd/MM/yyyy")</td>
+                            <td>
+                                @if(c.StatutCandidature.Libelle == "En attente")
+                                {
+                                    <span class="badge bg-warning text-dark">@c.StatutCandidature.Libelle</span>
+                                }
+                                else if(c.StatutCandidature.Libelle == "Accepté")
+                                {
+                                    <span class="badge bg-success">@c.StatutCandidature.Libelle</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-danger">@c.StatutCandidature.Libelle</span>
+                                }
+                            </td>
+                            <td>
+                                <a href="/Candidature/Details/@c.Id" class="arrow-action" data-bs-toggle="tooltip" title="Aller au détail">
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    }
                 </tbody>
             </table>
         </div>
     </div>
-    
-    <!-- PAGINATION + SELECT ITEMS PER PAGE -->
-    <div class="d-flex justify-content-end mt-4">
-        <ul class="pagination pagination-circle mb-0">
-            <li class="page-item disabled"><a class="page-link">‹</a></li>
-            <li class="page-item active"><a class="page-link">1</a></li>
-            <li class="page-item"><a class="page-link">2</a></li>
-            <li class="page-item"><a class="page-link">3</a></li>
-            <li class="page-item"><a class="page-link">›</a></li>
+
+    <!-- Pagination -->
+    <nav class="d-flex justify-content-end mt-3">
+        <ul class="pagination pagination-circle">
+            <li class="page-item @(pageNumber==1?"disabled":"")">
+                <a class="page-link" href="?keyword=@keyword&typeContrat=@typeContrat&pageNumber=@(pageNumber-1)&pageSize=@pageSize">‹</a>
+            </li>
+
+            @for (int i = 1; i <= totalPages; i++)
+            {
+                <li class="page-item @(i==pageNumber?"active":"")">
+                    <a class="page-link" href="?keyword=@keyword&typeContrat=@typeContrat&pageNumber=@i&pageSize=@pageSize">@i</a>
+                </li>
+            }
+
+            <li class="page-item @(pageNumber==totalPages?"disabled":"")">
+                <a class="page-link" href="?keyword=@keyword&typeContrat=@typeContrat&pageNumber=@(pageNumber+1)&pageSize=@pageSize">›</a>
+            </li>
         </ul>
-    </div>
-    
+    </nav>
+
 </div>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const tooltipTriggerList = [].slice.call(
-            document.querySelectorAll('[data-bs-toggle="tooltip"]')
-        )
-
-        tooltipTriggerList.map(function (tooltipTriggerEl) {
-            return new bootstrap.Tooltip(tooltipTriggerEl)
-        })
-    })
-</script>
-
-
-
-
