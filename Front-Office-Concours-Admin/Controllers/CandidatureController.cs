@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Front_Office_Concours_Admin.Models;
 using Front_Office_Concours_Admin.Repository;
+using Microsoft.AspNetCore.Http;
 
 namespace Front_Office_Concours_Admin.Controllers
 {
@@ -8,23 +9,27 @@ namespace Front_Office_Concours_Admin.Controllers
     {
         private readonly CandidatureRepository _candidatureRepo;
         private readonly TypeContratRepository _typeContratRepo;
+        private readonly IAnnonceRepository _annonceRepo;
 
-        public CandidatureController(CandidatureRepository candidatureRepo, TypeContratRepository typeContratRepo)
+        public CandidatureController(
+            CandidatureRepository candidatureRepo,
+            TypeContratRepository typeContratRepo,
+            IAnnonceRepository annonceRepo)
         {
             _candidatureRepo = candidatureRepo;
             _typeContratRepo = typeContratRepo;
+            _annonceRepo = annonceRepo;
         }
 
-        // GET: /Candidature/Index
-        public IActionResult Index(string keyword = "", string typeContrat = "", int pageNumber = 1, int pageSize = 1)
+        // =========================
+        // LISTE DES CANDIDATURES
+        // =========================
+        public IActionResult Index(string keyword = "", string typeContrat = "", int pageNumber = 1, int pageSize = 5)
         {
             int? candidatId = HttpContext.Session.GetInt32("CandidatId");
             if (candidatId == null)
-            {
                 return RedirectToAction("Login", "Auth");
-            }
 
-            // Récupérer candidatures avec recherche + filtre + pagination
             var (candidatures, totalCount) = _candidatureRepo.GetCandidatures(
                 candidatId.Value, keyword, typeContrat, pageNumber, pageSize
             );
@@ -34,30 +39,33 @@ namespace Front_Office_Concours_Admin.Controllers
             ViewData["PageNumber"] = pageNumber;
             ViewData["PageSize"] = pageSize;
             ViewData["TotalCount"] = totalCount;
-            
-            var typeContrats = _typeContratRepo.GetAll();
-            ViewBag.TypeContrats = typeContrats;
+
+            ViewBag.TypeContrats = _typeContratRepo.GetAll();
 
             return View(candidatures);
         }
-
-        // GET: /Candidature/Details/5
+        
         public IActionResult Details(int id)
         {
             int? candidatId = HttpContext.Session.GetInt32("CandidatId");
             if (candidatId == null)
-            {
                 return RedirectToAction("Login", "Auth");
-            }
 
-            var candidature = _candidatureRepo.GetCandidatureById(id);
+            DetailsCandidatureResponse details = _annonceRepo.GetDetailsCandidatureById(id);
 
-            if (candidature == null || candidature.CandidatId != candidatId.Value)
-            {
+            if (details == null)
                 return NotFound();
-            }
 
-            return View(candidature);
+            // Vérifie que la candidature appartient au candidat connecté
+            if (details.CandidatID != candidatId.Value)
+                return RedirectToAction("Login", "Auth");
+
+            foreach (var exigence in details.Exigences)
+            {
+                Console.WriteLine(exigence.Libelle);   
+            }
+            return View(details);
         }
+
     }
 }

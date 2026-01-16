@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Front_Office_Concours_Admin.Models.DetailsCandidatureResponse
+@{
     ViewData["Title"] = "Détails du poste";
 }
 
@@ -8,7 +9,6 @@
 
 <div class="container mt-4">
 
-    <!-- Bouton retour -->
     <a href="/Candidature" class="btn btn-link mb-3">
         ← Retour aux candidatures
     </a>
@@ -16,102 +16,100 @@
     <div class="details-card">
 
         <div class="details-header">
-            <h2 class="details-title">Développeur Full Stack</h2>
-            <span class="badge-custom-success">Temps plein</span>
+            <h2 class="details-title">@Model.TitrePoste</h2>
+            <span class="badge-custom-success">@Model.TypeEmploi</span>
         </div>
 
         <div class="details-meta">
-            <div><i class="bi bi-building"></i> Ministère de l’Éducation</div>
-            <div><i class="bi bi-geo-alt"></i> Antananarivo</div>
-            <div><i class="bi bi-briefcase"></i> CDI</div>
-            <div><i class="bi bi-clock"></i> Publié le 10/12/2025</div>
+            <div><i class="bi bi-building"></i> @Model.NomEntite</div>
+            <div><i class="bi bi-geo-alt"></i> @Model.LieuPoste</div>
+            <div><i class="bi bi-briefcase"></i> @Model.TypeContrat</div>
+            <div><i class="bi bi-clock"></i> Publié le @Model.DateCreationPoste.ToString("dd/MM/yyyy")</div>
         </div>
 
         <hr />
 
         <h5>Description du poste</h5>
-        <p>
-            Rejoignez une équipe dynamique pour développer des applications web modernes.
-            Vous participerez à la conception, au développement et à la maintenance
-            des systèmes informatiques du ministère.
-        </p>
+        <p>@Model.PosteDescription</p>
+        
+        <h5>Tâches principales</h5>
+        <ul>
+            @foreach(var tache in Model.taches)
+            {
+                <li>@tache</li>
+            }
+        </ul>
 
         <h5>Profil recherché</h5>
         <ul>
-            <li>Licence ou Master en informatique</li>
-            <li>Expérience en développement web</li>
-            <li>Maîtrise de C#, ASP.NET, JavaScript</li>
+            @foreach(var ex in Model.Exigences)
+            {
+                <li>@ex.Libelle</li>
+            }
         </ul>
 
         <h5>Conditions</h5>
         <ul>
-            <li>Type de contrat : CDI</li>
-            <li>Horaire : Temps plein</li>
-            <li>Lieu : Antananarivo</li>
+            <li>Type de contrat : @Model.TypeContrat</li>
+            <li>Horaire : @Model.TypeEmploi</li>
+            <li>Lieu : @Model.LieuPoste</li>
         </ul>
 
         <div class="details-actions">
             <div class="deadline">
                 <i class="bi bi-calendar-event"></i>
                 Postulé le :
-                <strong class="applying-date">20/12/2025</strong>
+                <strong class="applying-date">@Model.DatePostulation.ToString("dd/MM/yyyy")</strong>
             </div>
         </div>
     </div>
+
     <div class="details-card evolution">
         <hr />
         <h5>Évolution de la candidature</h5>
 
         <div class="timeline-container">
 
+            <!-- Étape Postulé -->
             <div class="timeline-step completed">
                 <div class="circle">
                     <i class="bi bi-check-lg"></i>
                 </div>
                 <div class="label">
                     <span>Postulé</span>
-                    <small>18/12/2025</small>
+                    <small>@Model.DatePostulation.ToString("dd/MM/yyyy")</small>
                 </div>
             </div>
 
-            <div class="timeline-line completed"></div>
+            <div class="timeline-line @(Model.Statut_ID >= 2 ? "completed" : "")"></div>
 
-            <div class="timeline-step completed">
+            <!-- Étape Validé -->
+            <div class="timeline-step @(Model.Statut_ID >= 2 ? "completed" : "")">
                 <div class="circle">
                     <i class="bi bi-check-lg"></i>
                 </div>
                 <div class="label">
                     <span>Validé</span>
-                    <small>19/12/2025</small>
+                    <small>@(Model.Statut_ID >= 2 ? Model.DatePostulation.AddDays(1).ToString("dd/MM/yyyy") : "—")</small>
                 </div>
             </div>
 
-            <div class="timeline-line"></div>
+            <div class="timeline-line @(Model.Statut_ID >= 3 ? "completed" : "")"></div>
 
-            <div class="timeline-step active">
+            <!-- Étape Décision -->
+            <div class="timeline-step @(Model.Statut_ID == 3 ? "decision-success" : Model.Statut_ID == 4 ? "decision-failed" : "")">
                 <div class="circle">
-                    <i class="bi bi-hourglass-split"></i>
-                </div>
-                <div class="label">
-                    <span>Entretien</span>
-                    <small>En attente</small>
-                </div>
-            </div>
-
-            <div class="timeline-line"></div>
-
-            <div class="timeline-step">
-                <div class="circle">
-                    <i class="bi bi-lock"></i>
+                    <i class="bi @(Model.Statut_ID == 3 ? "bi-check-circle-fill text-success" : Model.Statut_ID == 4 ? "bi-x-circle-fill text-danger" : "bi-lock")"></i>
                 </div>
                 <div class="label">
                     <span>Décision</span>
-                    <small>—</small>
+                    <small>
+                        @(Model.Statut_ID == 3 ? "Validée" :
+                        Model.Statut_ID == 4 ? "Refusée" : "—")
+                    </small>
                 </div>
             </div>
 
         </div>
     </div>
 </div>
-
-

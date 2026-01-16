@@ -234,5 +234,189 @@ public class AnnonceRepository : IAnnonceRepository
         return result;
     }
 
+   public DetailsCandidatureResponse GetDetailsCandidatureById(int candidatureId)
+    {
+        DetailsCandidatureResponse result = null;
+
+        using (SqlConnection conn = new SqlConnection(_connectionString))
+        {
+            conn.Open();
+
+            string queryDetails = @"
+                SELECT 
+                    c.candidatId candidat_id,
+                    a.Titre AS titre_poste,
+                    a.lieuPoste AS lieu_poste,
+                    tc.Libelle AS type_contrat,
+                    te.Libelle AS type_emploi,
+                    a.DateCreation AS date_creation,
+                    a.Description AS poste_description,
+                    c.DateCreation AS postule_date,
+                    sc.Libelle AS statut,
+                    e.Nom as nom_entite,
+                    sc.Id as statut_id,
+                    a.tachesPrincipales as taches_principales
+                FROM Candidature c
+                JOIN Annonce a ON c.annonceId = a.Id
+                JOIN Entite e ON a.entiteId = e.Id
+                JOIN TypeContrat tc ON tc.Id = a.typeContratId
+                JOIN TypeEmploi te ON te.Id = a.typeEmploiId
+                JOIN StatutCandidature sc ON sc.Id = c.statutCandidatureId
+                WHERE c.Id = @CandidatureId";
+
+            using (SqlCommand cmd = new SqlCommand(queryDetails, conn))
+            {
+                cmd.Parameters.AddWithValue("@CandidatureId", candidatureId);
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        result = new DetailsCandidatureResponse
+                        {
+                            CandidatID = reader.GetInt32(reader.GetOrdinal("candidat_id")),
+                            TitrePoste = reader.GetString(reader.GetOrdinal("titre_poste")),
+                            LieuPoste = reader.GetString(reader.GetOrdinal("lieu_poste")),
+                            TypeContrat = reader.GetString(reader.GetOrdinal("type_contrat")),
+                            TypeEmploi = reader.GetString(reader.GetOrdinal("type_emploi")),
+                            DateCreationPoste = reader.GetDateTime(reader.GetOrdinal("date_creation")),
+                            PosteDescription = reader.GetString(reader.GetOrdinal("poste_description")),
+                            DatePostulation = reader.GetDateTime(reader.GetOrdinal("postule_date")),
+                            Statut = reader.GetString(reader.GetOrdinal("statut")),
+                            NomEntite =  reader.GetString(reader.GetOrdinal("nom_entite")),
+                            Statut_ID =  reader.GetInt32(reader.GetOrdinal("statut_id")),
+                            TachesPrincipale = reader.GetString(reader.GetOrdinal("taches_principales")),
+                            taches = reader.GetString(reader.GetOrdinal("taches_principales")).Split(',') ?? new string[] { }
+                        };
+                    }
+                }
+            }
+
+            if (result == null)
+                return null;
+
+            string queryExigences = @"
+                SELECT
+                    e.Id AS id,
+                    e.Libelle AS libelle,
+                    COALESCE(dc.Valeur, CAST(0 AS bit)) AS Valeur
+                FROM Exigence e
+                LEFT JOIN DetailsCandidature dc
+                    ON e.Id = dc.exigenceId
+                WHERE e.annonceId = (
+                    SELECT annonceId FROM Candidature WHERE Id = @CandidatureId
+                )";
+    
+            using (SqlCommand cmd = new SqlCommand(queryExigences, conn))
+            {
+                cmd.Parameters.AddWithValue("@CandidatureId", candidatureId);
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        result.Exigences.Add(new ExigenceCandidatureDto
+                        {
+                            Id = reader.GetInt32(reader.GetOrdinal("id")),
+                            Libelle = reader.GetString(reader.GetOrdinal("libelle")),
+                            Valeur = reader.GetBoolean(reader.GetOrdinal("Valeur"))
+                        });
+                    }
+                }
+            }
+        }
+
+        return result;
+    }
+   
+   public DetailsAnnonceResponse GetDetailsAnnonceById(int annonceId)
+    {
+        DetailsAnnonceResponse result = null;
+
+        using (SqlConnection conn = new SqlConnection(_connectionString))
+        {
+            conn.Open();
+
+            string queryDetails = @"
+                SELECT 
+                    a.Titre AS titre_poste,
+                    a.lieuPoste AS lieu_poste,
+                    tc.Libelle AS type_contrat,
+                    te.Libelle AS type_emploi,
+                    a.DateCreation AS date_creation,
+                    a.Description AS poste_description,
+                    e.Nom as nom_entite,
+                    a.dateLimiteDepotDossier as dateLimiteDepotDossier,
+                    st.Libelle AS statut,
+                    a.tachesPrincipales as tachesPrincipales,
+                    a.id as annonce_id
+                FROM Annonce a 
+                JOIN Entite e ON a.entiteId = e.Id
+                JOIN TypeContrat tc ON tc.Id = a.typeContratId
+                JOIN TypeEmploi te ON te.Id = a.typeEmploiId
+                JOIN StatutAnnonce st ON st.Id = a.statutAnnonceId
+                WHERE a.id = @annonceId";
+
+            using (SqlCommand cmd = new SqlCommand(queryDetails, conn))
+            {
+                cmd.Parameters.AddWithValue("@annonceId", annonceId);
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        result = new DetailsAnnonceResponse
+                        {
+                            TitrePoste = reader.GetString(reader.GetOrdinal("titre_poste")),
+                            LieuPoste = reader.GetString(reader.GetOrdinal("lieu_poste")),
+                            TypeContrat = reader.GetString(reader.GetOrdinal("type_contrat")),
+                            TypeEmploi = reader.GetString(reader.GetOrdinal("type_emploi")),
+                            DateCreationPoste = reader.GetDateTime(reader.GetOrdinal("date_creation")),
+                            PosteDescription = reader.GetString(reader.GetOrdinal("poste_description")),
+                            DateLimiteDepotDossier = reader.GetDateTime(reader.GetOrdinal("dateLimiteDepotDossier")),
+                            Statut = reader.GetString(reader.GetOrdinal("statut")),
+                            NomEntite =  reader.GetString(reader.GetOrdinal("nom_entite")),
+                            TachesPrincipales = reader.GetString(reader.GetOrdinal("tachesPrincipales")),
+                            taches = reader.GetString(reader.GetOrdinal("tachesPrincipales")).Split(',') ?? new string[] { },
+                            Annonce_ID =  reader.GetInt32(reader.GetOrdinal("annonce_id")),
+                        };
+                    }
+                }
+            }
+
+            if (result == null)
+                return null;
+            string queryExigences = @"
+                SELECT
+                    e.Id AS id,
+                    e.Libelle AS libelle,
+                    e.isObligatoire as isObligatoire,
+                    e.needPieceJustificative as needPieceJustificative
+                FROM Exigence e
+                WHERE annonceId = @annonceId";
+    
+            using (SqlCommand cmd = new SqlCommand(queryExigences, conn))
+            {
+                cmd.Parameters.AddWithValue("@annonceId", annonceId);
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        result.Exigences.Add(new ExigenceAnnonceDto
+                        {
+                            Id = reader.GetInt32(reader.GetOrdinal("id")),
+                            Libelle = reader.GetString(reader.GetOrdinal("libelle")),
+                            IsObligatoire = reader.GetBoolean(reader.GetOrdinal("isObligatoire")),
+                            NeedPieceJustificative = reader.GetBoolean(reader.GetOrdinal("needPieceJustificative"))
+                        });
+                    }
+                }
+            }
+        }
+
+        return result;
+    }
+
 
 }

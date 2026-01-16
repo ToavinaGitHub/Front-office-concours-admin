@@ -10,4 +10,8 @@ public interface IAnnonceRepository
     
     AnnoncePagedViewModel GetPagedAnnoncesByIds (
         List<int> ids,int currentPage,int pageSize);
+
+    DetailsCandidatureResponse GetDetailsCandidatureById(int id);
+    
+    DetailsAnnonceResponse GetDetailsAnnonceById(int id);
 }

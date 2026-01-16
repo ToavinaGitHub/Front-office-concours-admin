@@ -1,4 +1,6 @@
-﻿namespace Front_Office_Concours_Admin.Models;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Front_Office_Concours_Admin.Models;
 
 public class DetailsCandidature
 {
@@ -12,6 +14,10 @@ public class DetailsCandidature
 
     public bool Valeur { get; set; }
     public string PieceJustificative { get; set; }
+    
+    [NotMapped]
+    public IFormFile PieceFile { get; set; }
+
 
     public DateTime DateCreation { get; set; }
     public DateTime? DateModification { get; set; }

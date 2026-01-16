@@ -45,28 +45,6 @@
                         }
                     </select>
                 </div>
-
-                <div class="col-md-4">
-                    <label class="form-label">Diplôme requis</label>
-                    <select class="form-select" name="diplome">
-                        <option value="">Tous</option>
-                        @{
-                            var diplomeOptions = new[] { "CEPE", "BEPC", "BACC", "Licence", "Master", "Doctorat" };
-                            foreach (var d in diplomeOptions)
-                            {
-                                if ((ViewBag.DiplomeFilter as string) == d)
-                                {
-                                    <option value="@d" selected>@d</option>
-                                }
-                                else
-                                {
-                                    <option value="@d">@d</option>
-                                }
-                            }
-                        }
-                    </select>
-                </div>
-
                 <div class="col-md-4">
                     <label class="form-label">Durée de travail</label>
                     <select class="form-select" name="horaire">

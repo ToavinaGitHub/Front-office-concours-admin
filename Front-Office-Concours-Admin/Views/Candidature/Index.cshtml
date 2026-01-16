@@ -72,22 +72,34 @@
                             <td>@c.Annonce.Entite.Nom</td>
                             <td>@c.Annonce.LieuPoste</td>
                             <td>
-                                <span class="badge bg-info">@c.Annonce.TypeContrat.Libelle</span>
+                                @{
+                                    string badgeClassTypeContrat = c.Annonce.TypeContrat.Id switch
+                                    {
+                                        1 => "bg-primary",    
+                                        2 => "bg-success",    
+                                        3 => "bg-warning text-dark", 
+                                        4 => "bg-info text-dark",   
+                                        5 => "bg-secondary",
+                                        6 => "bg-danger",  
+                                        _ => "bg-light text-dark" 
+                                    };
+                                }
+                                <span class="badge @badgeClassTypeContrat">@c.Annonce.TypeContrat.Libelle</span>
                             </td>
+
                             <td>@c.DateCreation.ToString("dd/MM/yyyy")</td>
                             <td>
-                                @if(c.StatutCandidature.Libelle == "En attente")
-                                {
-                                    <span class="badge bg-warning text-dark">@c.StatutCandidature.Libelle</span>
+                                @{
+                                    string badgeClass = c.StatutCandidature.Id switch
+                                    {
+                                        1 => "bg-warning text-dark",
+                                        2 => "bg-warning text-light",
+                                        3 => "bg-success",
+                                        _ => "bg-danger"
+                                    };
                                 }
-                                else if(c.StatutCandidature.Libelle == "Accepté")
-                                {
-                                    <span class="badge bg-success">@c.StatutCandidature.Libelle</span>
-                                }
-                                else
-                                {
-                                    <span class="badge bg-danger">@c.StatutCandidature.Libelle</span>
-                                }
+                                <span class="badge @badgeClass">@c.StatutCandidature.Libelle</span>
+
                             </td>
                             <td>
                                 <a href="/Candidature/Details/@c.Id" class="arrow-action" data-bs-toggle="tooltip" title="Aller au détail">
