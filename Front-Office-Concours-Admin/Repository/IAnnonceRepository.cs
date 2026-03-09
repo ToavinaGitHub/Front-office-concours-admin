@@ -14,4 +14,15 @@ public interface IAnnonceRepository
     DetailsCandidatureResponse GetDetailsCandidatureById(int id);
     
     DetailsAnnonceResponse GetDetailsAnnonceById(int id);
+    
+    bool CheckIfUserAlreadyApply(int userId, int annonceId);
+
+    Task<List<AnnonceElasticSearchResult>> SearchAsync(
+        string? titre,
+        string? lieu,
+        int? contratId,
+        int? emploiId,
+        string? sortOrder,
+        int page,
+        int size);
 }

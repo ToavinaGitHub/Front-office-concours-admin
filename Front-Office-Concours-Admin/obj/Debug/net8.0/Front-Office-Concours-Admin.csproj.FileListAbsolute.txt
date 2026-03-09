@@ -1,53 +1,55 @@
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\appsettings.Development.json
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\appsettings.json
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\Front-Office-Concours-Admin.staticwebassets.runtime.json
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\Front-Office-Concours-Admin.exe
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\Front-Office-Concours-Admin.deps.json
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\Front-Office-Concours-Admin.runtimeconfig.json
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\Front-Office-Concours-Admin.dll
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\Front-Office-Concours-Admin.pdb
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\obj\Debug\net8.0\Front-Office-Concours-Admin.GeneratedMSBuildEditorConfig.editorconfig
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\obj\Debug\net8.0\Front-Office-Concours-Admin.AssemblyInfoInputs.cache
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\obj\Debug\net8.0\Front-Office-Concours-Admin.AssemblyInfo.cs
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\obj\Debug\net8.0\Front-Office-Concours-Admin.csproj.CoreCompileInputs.cache
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\obj\Debug\net8.0\Front-Office-Concours-Admin.MvcApplicationPartsAssemblyInfo.cache
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\obj\Debug\net8.0\Front-Office-Concours-Admin.RazorAssemblyInfo.cache
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\obj\Debug\net8.0\Front-Office-Concours-Admin.RazorAssemblyInfo.cs
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\obj\Debug\net8.0\staticwebassets.build.json
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\obj\Debug\net8.0\staticwebassets.development.json
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\obj\Debug\net8.0\staticwebassets\msbuild.Front-Office-Concours-Admin.Microsoft.AspNetCore.StaticWebAssets.props
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\obj\Debug\net8.0\staticwebassets\msbuild.build.Front-Office-Concours-Admin.props
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Front-Office-Concours-Admin.props
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Front-Office-Concours-Admin.props
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\obj\Debug\net8.0\staticwebassets.pack.json
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\obj\Debug\net8.0\scopedcss\bundle\Front-Office-Concours-Admin.styles.css
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\obj\Debug\net8.0\scopedcss\projectbundle\Front-Office-Concours-Admin.bundle.scp.css
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\obj\Debug\net8.0\Front-Office-Concours-Admin.dll
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\obj\Debug\net8.0\refint\Front-Office-Concours-Admin.dll
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\obj\Debug\net8.0\Front-Office-Concours-Admin.pdb
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\obj\Debug\net8.0\Front-Office-Concours-Admin.genruntimeconfig.cache
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\obj\Debug\net8.0\ref\Front-Office-Concours-Admin.dll
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\obj\Debug\net8.0\Front-Office-Concours-Admin.sourcelink.json
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\System.Data.SqlClient.dll
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\runtimes\win-arm64\native\sni.dll
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\runtimes\win-x64\native\sni.dll
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\runtimes\unix\lib\net8.0\System.Data.SqlClient.dll
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\obj\Debug\net8.0\Front-Office-Concours-Admin.csproj.AssemblyReference.cache
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\obj\Debug\net8.0\Front-Of.DB199D6E.Up2Date
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\Elasticsearch.Net.dll
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\Nest.dll
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\Microsoft.Extensions.WebEncoders.dll
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\System.Security.Cryptography.Xml.dll
-E:\Master 2\Gestion-concours-admin\Front-Office-Concours-Admin\Front-Office-Concours-Admin\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/obj/Debug/net8.0/Front-Office-Concours-Admin.csproj.AssemblyReference.cache
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/obj/Debug/net8.0/Front-Office-Concours-Admin.GeneratedMSBuildEditorConfig.editorconfig
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/obj/Debug/net8.0/Front-Office-Concours-Admin.AssemblyInfoInputs.cache
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/obj/Debug/net8.0/Front-Office-Concours-Admin.AssemblyInfo.cs
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/obj/Debug/net8.0/Front-Office-Concours-Admin.csproj.CoreCompileInputs.cache
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/obj/Debug/net8.0/Front-Office-Concours-Admin.MvcApplicationPartsAssemblyInfo.cache
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/obj/Debug/net8.0/Front-Office-Concours-Admin.RazorAssemblyInfo.cache
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/obj/Debug/net8.0/Front-Office-Concours-Admin.RazorAssemblyInfo.cs
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/obj/Debug/net8.0/Front-Office-Concours-Admin.sourcelink.json
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/bin/Debug/net8.0/appsettings.Development.json
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/bin/Debug/net8.0/appsettings.json
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/bin/Debug/net8.0/Front-Office-Concours-Admin.staticwebassets.runtime.json
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/bin/Debug/net8.0/Front-Office-Concours-Admin
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/bin/Debug/net8.0/Front-Office-Concours-Admin.deps.json
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/bin/Debug/net8.0/Front-Office-Concours-Admin.runtimeconfig.json
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/bin/Debug/net8.0/Front-Office-Concours-Admin.dll
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/bin/Debug/net8.0/Front-Office-Concours-Admin.pdb
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/bin/Debug/net8.0/Elasticsearch.Net.dll
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/bin/Debug/net8.0/Microsoft.Extensions.DependencyInjection.dll
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/bin/Debug/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/bin/Debug/net8.0/Microsoft.Extensions.Diagnostics.Abstractions.dll
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/bin/Debug/net8.0/Microsoft.Extensions.Hosting.Abstractions.dll
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/bin/Debug/net8.0/Microsoft.Extensions.Logging.dll
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/bin/Debug/net8.0/Microsoft.Extensions.Logging.Abstractions.dll
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/bin/Debug/net8.0/Microsoft.Extensions.ObjectPool.dll
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/bin/Debug/net8.0/Microsoft.Extensions.Options.dll
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/bin/Debug/net8.0/Microsoft.Extensions.WebEncoders.dll
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/bin/Debug/net8.0/Nest.dll
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/bin/Debug/net8.0/System.Data.SqlClient.dll
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/bin/Debug/net8.0/System.Security.Cryptography.Pkcs.dll
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/bin/Debug/net8.0/System.Security.Cryptography.Xml.dll
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/bin/Debug/net8.0/runtimes/win-arm64/native/sni.dll
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/bin/Debug/net8.0/runtimes/win-x64/native/sni.dll
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/bin/Debug/net8.0/runtimes/win-x86/native/sni.dll
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/bin/Debug/net8.0/runtimes/unix/lib/net8.0/System.Data.SqlClient.dll
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/bin/Debug/net8.0/runtimes/win/lib/net8.0/System.Data.SqlClient.dll
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/bin/Debug/net8.0/runtimes/win/lib/net8.0/System.Security.Cryptography.Pkcs.dll
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/bin/Debug/net8.0/dotnetProjectShared.dll
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/bin/Debug/net8.0/dotnetProjectShared.pdb
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/obj/Debug/net8.0/staticwebassets.build.json
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/obj/Debug/net8.0/staticwebassets.development.json
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/obj/Debug/net8.0/staticwebassets/msbuild.Front-Office-Concours-Admin.Microsoft.AspNetCore.StaticWebAssets.props
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/obj/Debug/net8.0/staticwebassets/msbuild.build.Front-Office-Concours-Admin.props
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.Front-Office-Concours-Admin.props
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.Front-Office-Concours-Admin.props
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/obj/Debug/net8.0/staticwebassets.pack.json
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/obj/Debug/net8.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/obj/Debug/net8.0/scopedcss/bundle/Front-Office-Concours-Admin.styles.css
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/obj/Debug/net8.0/scopedcss/projectbundle/Front-Office-Concours-Admin.bundle.scp.css
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/obj/Debug/net8.0/Front-Of.DB199D6E.Up2Date
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/obj/Debug/net8.0/Front-Office-Concours-Admin.dll
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/obj/Debug/net8.0/refint/Front-Office-Concours-Admin.dll
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/obj/Debug/net8.0/Front-Office-Concours-Admin.pdb
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/obj/Debug/net8.0/Front-Office-Concours-Admin.genruntimeconfig.cache
+/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/obj/Debug/net8.0/ref/Front-Office-Concours-Admin.dll

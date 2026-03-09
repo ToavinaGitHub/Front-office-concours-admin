@@ -1,6 +1,8 @@
 ﻿@model Front_Office_Concours_Admin.Models.DetailsAnnonceResponse
 @{
     ViewData["Title"] = "Détails du poste";
+    bool isAlreadyApply = ViewBag.IsAlreadyApply ?? false;
+    
 }
 
 <link rel="stylesheet" href="~/css/details_annonces.css" asp-append-version="true" />
@@ -24,12 +26,16 @@
         }
 
         <!-- Succès -->
-        @if (TempData["SuccessMessage"] != null)
+        @{
+            var successMessage = TempData["SuccessMessage"] as string;
+        }
+
+        @if (!string.IsNullOrEmpty(successMessage))
         {
             <div class="toast align-items-center text-bg-success border-0 show" role="alert" aria-live="assertive" aria-atomic="true">
                 <div class="d-flex">
                     <div class="toast-body">
-                        @TempData["SuccessMessage"]
+                                            @successMessage
                     </div>
                     <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
                 </div>
@@ -151,7 +157,21 @@
 
         <div class="details-header">
             <h2 class="details-title">@Model.TitrePoste</h2>
-            <span class="badge-custom-success">@Model.TypeContrat</span>
+            @{
+                string badgeClass = @Model.TypeEmploi_ID switch
+                {
+                    1 => "badge-custom-success",      // Temps plein
+                    2 => "badge-custom-primary",      // Temps partiel
+                    3 => "badge-custom-info",         // Télétravail
+                    4 => "badge-custom-warning",      // Hybride
+                    5 => "badge-custom-secondary",    // Mission temporaire
+                    6 => "badge-custom-danger",       // Consultant
+                    _ => "badge-custom-light"         // Non précisé
+                };
+            }
+            <span class="@badgeClass badge-top-right">
+                @(@Model.TypeEmploi ?? "Non précisé")
+            </span>
         </div>
 
         <div class="details-meta">
@@ -196,9 +216,24 @@
                 <strong class="deadline-text">@Model.DateLimiteDepotDossier.ToString("dd/MM/yyyy")</strong>
             </div>
 
-            <a onclick="openApplyModal()" class="btn btn-primary btn-modern">
-                Postuler
-            </a>
+            @if (isAlreadyApply)
+            {
+                <span class="d-inline-block" tabindex="0"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      title="Vous avez déjà postulé à cette annonce">
+                    <button class="btn btn-secondary btn-modern" disabled>
+                        Déjà postulé
+                    </button>
+                </span>
+            }
+            else
+            {
+                <a onclick="openApplyModal()"
+                   class="btn btn-primary btn-modern">
+                    Postuler
+                </a>
+            }
         </div>
 
 

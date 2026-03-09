@@ -7,9 +7,10 @@
         public string LieuPoste { get; set; }
         public string TypeContrat { get; set; }
         public string TypeEmploi { get; set; }
+        public int TypeEmploi_ID { get; set; }
         public DateTime DateCreationPoste { get; set; }
         public string PosteDescription { get; set; }
-        public string Statut { get; set; }
+        public int Statut { get; set; }
         public int Statut_ID { get; set; }
         
         public string TachesPrincipales { get; set; }

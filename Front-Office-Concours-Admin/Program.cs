@@ -11,9 +11,14 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton<IConfiguration>(builder.Configuration);
 
 builder.Services.AddScoped<IAnnonceRepository, AnnonceRepository>();
+builder.Services.AddHttpClient<IAnnonceRepository, AnnonceRepository>(client =>
+{
+    client.BaseAddress = new Uri("http://192.168.88.16:5190");
+});
+
 builder.Services.AddScoped<CandidatureRepository>();
 builder.Services.AddScoped<TypeContratRepository>();
-
+builder.Services.AddScoped<TypeEmploiRepository>();
 builder.Services.AddSingleton<ElasticSearchService>();
 
 builder.Services.AddDistributedMemoryCache();
@@ -31,19 +36,6 @@ using (var scope = app.Services.CreateScope())
 {
     var repo = scope.ServiceProvider.GetRequiredService<IAnnonceRepository>();
     var elastic = scope.ServiceProvider.GetRequiredService<ElasticSearchService>();
-
-    int page = 1, pageSize = 100;
-    AnnoncePagedViewModel annoncesBatch;
-
-    do
-    {
-        annoncesBatch = repo.GetPagedAnnonces(page, pageSize);
-        foreach (var annonce in annoncesBatch.Annonces)
-        {
-            elastic.IndexAnnonce(annonce); 
-        }
-        page++;
-    } while (annoncesBatch.Annonces.Count > 0);
 }
 
 

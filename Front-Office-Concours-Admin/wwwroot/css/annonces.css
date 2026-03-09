@@ -233,3 +233,20 @@
     transform: translateY(0);
 }
 
+.badge-custom-success { background-color: #28a745; color: white; }
+.badge-custom-primary { background-color: #007bff; color: white; }
+.badge-custom-info { background-color: #17a2b8; color: white; }
+.badge-custom-warning { background-color: #ffc107; color: black; }
+.badge-custom-secondary { background-color: #6c757d; color: white; }
+.badge-custom-danger { background-color: #dc3545; color: white; }
+.badge-custom-light { background-color: #f8f9fa; color: black; }
+.badge-top-right {
+    display: inline-block;
+    padding: 0.35em 0.65em;
+    font-size: 0.75em;
+    font-weight: 500;
+    line-height: 1;
+    border-radius: 0.35rem;
+}
+
+

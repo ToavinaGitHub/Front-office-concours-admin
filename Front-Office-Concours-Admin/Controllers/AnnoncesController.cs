@@ -5,48 +5,72 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Front_Office_Concours_Admin.Controllers;
 
+
 public class AnnoncesController : Controller
 {
     
     private readonly IAnnonceRepository _repository;
     private readonly ElasticSearchService _elasticService;
     private readonly CandidatureRepository _candidatureRepo;
+    private readonly TypeContratRepository _typeContratRepo;
+    private readonly TypeEmploiRepository _typeEmploiRepo;
 
-    public AnnoncesController(IAnnonceRepository repository, ElasticSearchService elasticService, CandidatureRepository candidatureRepo)
+    public AnnoncesController(IAnnonceRepository repository, ElasticSearchService elasticService, CandidatureRepository candidatureRepo,TypeContratRepository typeContratRepo,TypeEmploiRepository typeEmploiRepo)
     {
         _repository = repository;
         _elasticService = elasticService;
         _candidatureRepo = candidatureRepo;
+        _typeContratRepo = typeContratRepo;
+        _typeEmploiRepo = typeEmploiRepo;
     }
 
     // GET
-    public IActionResult Index(
-        string title, string location, string typeContrat, string diplome, string horaire,
-        int currentPage = 1, int pageSize = 6)
+    public async Task<IActionResult> Index(
+        string? title,
+        string? location,
+        int? typeContrat,
+        int? horaire,
+        int currentPage = 1,
+        int pageSize = 6)
     {
-        var vm = _repository.GetPagedAnnonces(currentPage, pageSize);
+        var annonces = await _repository.SearchAsync(
+            title,
+            location,
+            typeContrat,
+            horaire,
+            "dateDesc",
+            currentPage,
+            pageSize
+        );
 
-        // Tu peux encore mettre tes filtres dans ViewBag si tu veux
         ViewBag.TitleFilter = title;
         ViewBag.LocationFilter = location;
         ViewBag.TypeContratFilter = typeContrat;
         ViewBag.HoraireFilter = horaire;
 
-        // ⚠ Passe le viewmodel complet et non juste la liste
-        return View(vm);
+        ViewBag.allTypeContrat = _typeContratRepo.GetAll();
+        ViewBag.allTypeEmploi = _typeEmploiRepo.GetAll();
+
+        return View(annonces); 
     }
 
 
     
     public IActionResult Details(int id)
-    { 
+    {
         int? candidatId = HttpContext.Session.GetInt32("CandidatId");
         if (candidatId == null)
             return RedirectToAction("Login", "Auth");
+
+        bool isAlreadyApply = _repository.CheckIfUserAlreadyApply(candidatId.Value, id);
+        ViewBag.IsAlreadyApply = isAlreadyApply;
+
         var details = _repository.GetDetailsAnnonceById(id);
-        var taches = details?.TachesPrincipales?.Split(',') ?? new string[] { };
+        var taches = details?.TachesPrincipales?.Split(',') ?? Array.Empty<string>();
+
         return View(details);
     }
+
 
     public IActionResult Apply(int id)
     {

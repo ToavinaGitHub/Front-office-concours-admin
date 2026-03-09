@@ -1,6 +1,7 @@
-﻿@model Front_Office_Concours_Admin.Models.AnnoncePagedViewModel
+﻿@model List<Front_Office_Concours_Admin.Models.AnnonceElasticSearchResult>
+
 @{
-    ViewData["Title"] = "Recherche d'emploi";
+ViewData["Title"] = "Recherche d'emploi";
 }
 
 <link rel="stylesheet" href="~/css/annonces.css" asp-append-version="true" />
@@ -9,145 +10,155 @@
 <div class="container mt-4">
 
     <!-- 🔍 Formulaire de recherche -->
-    <div class="search-card mb-1">
+    <div class="search-card mb-3">
         <form method="get">
             <div class="row g-3">
 
                 <div class="col-md-4">
                     <label class="form-label">Titre du poste</label>
-                    <input class="form-control" name="title" placeholder="Ex: Développeur, Comptable..."
+                    <input class="form-control" name="title"
+                           placeholder="Ex: Développeur, Comptable..."
                            value="@ViewBag.TitleFilter" />
                 </div>
 
                 <div class="col-md-4">
                     <label class="form-label">Lieu</label>
-                    <input class="form-control" name="location" placeholder="Ex: Antananarivo, Tamatave"
+                    <input class="form-control" name="location"
+                           placeholder="Ex: Antananarivo, Tamatave"
                            value="@ViewBag.LocationFilter" />
                 </div>
+
+                <!-- TYPE DE CONTRAT -->
+                @{
+                var typeContratOptions = new[]
+                {
+                "CDI", "CDD", "Stage", "Alternance", "Freelance", "Intérim"
+                };
+                }
 
                 <div class="col-md-4">
                     <label class="form-label">Type de contrat</label>
                     <select class="form-select" name="typeContrat">
                         <option value="">Tous</option>
-                        @{
-                            var tcOptions = new[] { "CDI", "CDD", "Stage", "Freelance" };
-                            foreach (var tc in tcOptions)
+
+                        @foreach (var tc in ViewBag.allTypeContrat)
+                        {
+                            if (ViewBag.TypeContratFilter != null && ViewBag.TypeContratFilter == tc.Id)
                             {
-                                if ((ViewBag.TypeContratFilter as string) == tc)
-                                {
-                                    <option value="@tc" selected>@tc</option>
-                                }
-                                else
-                                {
-                                    <option value="@tc">@tc</option>
-                                }
+                                <option value="@tc.Id" selected>@tc.Libelle</option>
+                            }
+                            else
+                            {
+                                <option value="@tc.Id">@tc.Libelle</option>
                             }
                         }
                     </select>
+
                 </div>
+
+                <!-- TYPE D'EMPLOI -->
+                @{
+                var typeEmploiOptions = new[]
+                {
+                "Temps plein",
+                "Temps partiel",
+                "Télétravail",
+                "Hybride",
+                "Mission temporaire",
+                "Consultant"
+                };
+                }
+
                 <div class="col-md-4">
-                    <label class="form-label">Durée de travail</label>
+                    <label class="form-label">Type d’emploi</label>
                     <select class="form-select" name="horaire">
                         <option value="">Tous</option>
-                        @{
-                            var horaireOptions = new[] { "Temps plein", "Temps partiel" };
-                            foreach (var h in horaireOptions)
+
+                        @foreach (var te in ViewBag.allTypeEmploi)
+                        {
+                            if (ViewBag.HoraireFilter != null && ViewBag.HoraireFilter == te.Id)
                             {
-                                if ((ViewBag.HoraireFilter as string) == h)
-                                {
-                                    <option value="@h" selected>@h</option>
-                                }
-                                else
-                                {
-                                    <option value="@h">@h</option>
-                                }
+                                <option value="@te.Id" selected>@te.Libelle</option>
+                            }
+                            else
+                            {
+                                <option value="@te.Id">@te.Libelle</option>
                             }
                         }
                     </select>
+
                 </div>
 
                 <div class="col-12 text-end mt-3">
-                    <button type="submit" class="btn btn-primary btn-modern">Rechercher</button>
+                    <button type="submit" class="btn btn-primary btn-modern">
+                        Rechercher
+                    </button>
                 </div>
 
             </div>
         </form>
     </div>
 
-    <!-- 📄 Liste des jobs -->
-    <div class="results-bar">
-        <div class="d-flex align-items-center results">
-            <label class="me-2 mb-0">Afficher :</label>
-            <form method="get" class="d-inline">
-                <select class="form-select form-select-sm" style="width: 80px;" name="pageSize" onchange="this.form.submit()">
-                    @foreach (var size in new int[] {10, 25, 50})
-                    {
-                        if (size == Model.PageSize)
-                        {
-                            <option value="@size" selected>@size</option>
-                        }
-                        else
-                        {
-                            <option value="@size">@size</option>
-                        }
-                    }
-                </select>
-                <input type="hidden" name="currentPage" value="@Model.CurrentPage" />
-            </form>
-        </div>
-
-        <h6 class="mb-0">
-            Page <strong>@Model.CurrentPage</strong> sur <strong>@Model.TotalPages</strong>
-        </h6>
-        <h6 class="mb-0">
-            <strong>@Model.TotalItems</strong> résultat(s)
-        </h6>
-    </div>
-
+    <!-- 📄 Résultats -->
+    @if (Model != null && Model.Any())
+    {
     <div class="row g-4">
-        @foreach (var annonce in Model.Annonces)
+        @foreach (var annonce in Model)
         {
-            <div class="col-md-4">
-                <div class="card-modern h-100 p-3 position-relative">
-                    <span class="badge-custom-@(annonce.TypeEmploi?.Libelle == "Temps plein" ? "success" : "warning") badge-top-right">
-                        @(annonce.TypeEmploi?.Libelle ?? "Non précisé")
-                    </span>
+        <div class="col-md-4">
+            <div class="card-modern h-100 p-3 position-relative">
 
-                    <div class="job-card-title">@annonce.Titre</div>
-                    <div class="job-entity">
-                        <i class="bi bi-building"></i> @annonce.Entite?.Nom
+                @{
+                string badgeClass = annonce.TypeEmploiId switch
+                {
+                1 => "badge-custom-success",
+                2 => "badge-custom-primary",
+                3 => "badge-custom-info",
+                4 => "badge-custom-warning",
+                5 => "badge-custom-secondary",
+                6 => "badge-custom-danger",
+                _ => "badge-custom-light"
+                };
+                }
+
+                <span class="@badgeClass badge-top-right">
+                            @annonce.TypeEmploi
+                        </span>
+
+                <div class="job-card-title">@annonce.Titre</div>
+
+                <div class="job-entity">
+                    <i class="bi bi-building"></i> @annonce.EntiteNom
+                </div>
+
+                <div class="job-location mb-2">
+                    @annonce.Lieu - @annonce.TypeContrat
+                </div>
+
+                <p>@annonce.Description</p>
+
+                <div class="job-footer d-flex justify-content-between align-items-center mt-3">
+                    <div class="job-date">
+                        <i class="bi bi-clock"></i>
+                        @annonce.DatePublication.ToString("dd/MM/yyyy")
                     </div>
-                    <div class="job-location mb-2">
-                        @annonce.LieuPoste - @(@annonce.TypeContrat?.Libelle ?? "Non précisé")
-                    </div>
-                    <p>@annonce.Description</p>
-                    <div class="job-footer d-flex justify-content-between align-items-center mt-3">
-                        <div class="job-date"><i class="bi bi-clock"></i> @annonce.DateLimiteDepotDossier.ToString("dd/MM/yyyy")</div>
-                        <a href="@Url.Action("Details", "Annonces", new { id = annonce.Id })" 
-                           class="btn btn-outline-primary btn-modern">Voir l’offre</a>
-                    </div>
+
+                    <a href="@Url.Action("Details", "Annonces", new { id = annonce.Id })"
+                       class="btn btn-outline-primary btn-modern">
+                        Voir l’offre
+                    </a>
                 </div>
             </div>
+        </div>
         }
     </div>
-
-    <!-- PAGINATION + SELECT ITEMS PER PAGE -->
-    <div class="d-flex justify-content-end mt-4">
-        <ul class="pagination pagination-circle mb-0">
-            <li class="page-item @(Model.CurrentPage == 1 ? "disabled" : "")">
-                <a class="page-link" href="@Url.Action("Index", new { currentPage = Model.CurrentPage - 1 })">‹</a>
-            </li>
-            @for (int i = 1; i <= Model.TotalPages; i++)
-            {
-                <li class="page-item @(i == Model.CurrentPage ? "active" : "")">
-                    <a class="page-link" href="@Url.Action("Index", new { currentPage = i })">@i</a>
-                </li>
-            }
-            <li class="page-item @(Model.CurrentPage == Model.TotalPages ? "disabled" : "")">
-                <a class="page-link" href="@Url.Action("Index", new { currentPage = Model.CurrentPage + 1 })">›</a>
-            </li>
-        </ul>
+    }
+    else
+    {
+    <div class="alert alert-warning text-center">
+        Aucun résultat trouvé.
     </div>
+    }
 
     <div id="toast-error" class="toast-error">
         <i class="bi bi-exclamation-triangle"></i>
@@ -156,10 +167,10 @@
 </div>
 
 <script>
-function showErrorToast(message) {
-    const toast = document.getElementById('toast-error');
-    toast.innerHTML = `<i class="bi bi-exclamation-triangle"></i> ${message}`;
-    toast.classList.add('show');
-    setTimeout(() => toast.classList.remove('show'), 3000);
-}
+    function showErrorToast(message) {
+        const toast = document.getElementById('toast-error');
+        toast.innerHTML = `<i class="bi bi-exclamation-triangle"></i> ${message}`;
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 3000);
+    }
 </script>

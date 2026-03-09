@@ -10,7 +10,8 @@
         "dependencies": {
           "Microsoft.AspNetCore.Identity": "2.3.9",
           "NEST": "7.17.5",
-          "System.Data.SqlClient": "4.9.0"
+          "System.Data.SqlClient": "4.9.0",
+          "dotnetProjectShared": "1.0.0"
         },
         "runtime": {
           "Front-Office-Concours-Admin.dll": {}
@@ -292,7 +293,7 @@
           "runtimes/win-arm64/native/sni.dll": {
             "rid": "win-arm64",
             "assetType": "native",
-            "fileVersion": "4.6.25512.1"
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -301,7 +302,7 @@
           "runtimes/win-x64/native/sni.dll": {
             "rid": "win-x64",
             "assetType": "native",
-            "fileVersion": "4.6.25512.1"
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -310,7 +311,7 @@
           "runtimes/win-x86/native/sni.dll": {
             "rid": "win-x86",
             "assetType": "native",
-            "fileVersion": "4.6.25512.1"
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -376,7 +377,15 @@
         }
       },
       "System.Security.Principal.Windows/5.0.0": {},
-      "System.Text.Encodings.Web/8.0.0": {}
+      "System.Text.Encodings.Web/8.0.0": {},
+      "dotnetProjectShared/1.0.0": {
+        "runtime": {
+          "dotnetProjectShared.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
     }
   },
   "libraries": {
@@ -720,6 +729,11 @@
       "sha512": "sha512-yev/k9GHAEGx2Rg3/tU6MQh4HGBXJs70y7j1LaM1i/ER9po+6nnQ6RRqTJn1E7Xu0fbIFK80Nh5EoODxrbxwBQ==",
       "path": "system.text.encodings.web/8.0.0",
       "hashPath": "system.text.encodings.web.8.0.0.nupkg.sha512"
+    },
+    "dotnetProjectShared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

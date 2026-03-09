@@ -1,16 +1,23 @@
 ﻿
 using System.Data.SqlClient;
+using System.Web;
 using Front_Office_Concours_Admin.Models;
+using Front_Office_Concours_Admin.Services;
+using Microsoft.AspNetCore.WebUtilities;
+using StatutAnnonce = dotnetProjectShared.Enums.StatutAnnonce;
 
 namespace Front_Office_Concours_Admin.Repository;
 
 public class AnnonceRepository : IAnnonceRepository
 {
     private readonly string _connectionString;
+    private readonly HttpClient _httpClient;
+    
 
-    public AnnonceRepository(IConfiguration configuration)
+    public AnnonceRepository(IConfiguration configuration,HttpClient httpClient)
     {
         _connectionString = configuration.GetConnectionString("DefaultConnection");
+        _httpClient = httpClient;  
     }
 
     public AnnoncePagedViewModel GetPagedAnnonces(int currentPage, int pageSize)
@@ -95,10 +102,18 @@ public class AnnonceRepository : IAnnonceRepository
                 Nom = reader["EntiteNom"].ToString(),
             };
 
-            annonce.StatutAnnonce = new StatutAnnonce
+            var enumService = new EnumsService();
+            
+            int statutId = (int)reader["StatutAnnonce"];
+
+            // utiliser l'enum Shared
+           // string libelle = enumService.GetDescriptionFromEnumValue<StatutAnnonce>(statutId);
+
+            // créer l'objet StatutAnnonce (classe) pour ton annonce
+            annonce.StatutAnnonce = new Front_Office_Concours_Admin.Models.StatutAnnonce
             {
-                Id = (int)reader["StatutAnnonceId"],
-                Libelle = reader["StatutAnnonceLibelle"].ToString()
+                Id = statutId,
+                Libelle = ""
             };
 
             if (reader["TypeContratId"] != DBNull.Value)
@@ -204,11 +219,22 @@ public class AnnonceRepository : IAnnonceRepository
                 Nom = reader["EntiteNom"].ToString(),
             };
 
-            annonce.StatutAnnonce = new StatutAnnonce
+            
+
+             var enumService = new EnumsService();
+
+
+            int statutId = (int)reader["StatutAnnonce"];
+
+            //string libelle = enumService.GetDescriptionFromEnumValue<dotnetProjectShared.Enums.StatutAnnonce>(statutId);
+
+            // créer l'objet StatutAnnonce (classe) pour ton annonce
+            annonce.StatutAnnonce = new Front_Office_Concours_Admin.Models.StatutAnnonce
             {
-                Id = (int)reader["StatutAnnonceId"],
-                Libelle = reader["StatutAnnonceLibelle"].ToString()
+                Id = statutId,
+                Libelle = ""
             };
+
 
             if (reader["TypeContratId"] != DBNull.Value)
             {
@@ -252,18 +278,20 @@ public class AnnonceRepository : IAnnonceRepository
                     a.DateCreation AS date_creation,
                     a.Description AS poste_description,
                     c.DateCreation AS postule_date,
-                    sc.Libelle AS statut,
                     e.Nom as nom_entite,
-                    sc.Id as statut_id,
+                    c.statutCandidature as statut_id,
                     a.tachesPrincipales as taches_principales
                 FROM Candidature c
                 JOIN Annonce a ON c.annonceId = a.Id
                 JOIN Entite e ON a.entiteId = e.Id
                 JOIN TypeContrat tc ON tc.Id = a.typeContratId
                 JOIN TypeEmploi te ON te.Id = a.typeEmploiId
-                JOIN StatutCandidature sc ON sc.Id = c.statutCandidatureId
                 WHERE c.Id = @CandidatureId";
 
+            
+
+            var enumsService = new EnumsService();
+            
             using (SqlCommand cmd = new SqlCommand(queryDetails, conn))
             {
                 cmd.Parameters.AddWithValue("@CandidatureId", candidatureId);
@@ -282,7 +310,7 @@ public class AnnonceRepository : IAnnonceRepository
                             DateCreationPoste = reader.GetDateTime(reader.GetOrdinal("date_creation")),
                             PosteDescription = reader.GetString(reader.GetOrdinal("poste_description")),
                             DatePostulation = reader.GetDateTime(reader.GetOrdinal("postule_date")),
-                            Statut = reader.GetString(reader.GetOrdinal("statut")),
+                            Statut = enumsService.GetDescriptionFromEnumValue(typeof(dotnetProjectShared.Enums.StatutCandidature), reader.GetInt32(reader.GetOrdinal("statut_id"))),
                             NomEntite =  reader.GetString(reader.GetOrdinal("nom_entite")),
                             Statut_ID =  reader.GetInt32(reader.GetOrdinal("statut_id")),
                             TachesPrincipale = reader.GetString(reader.GetOrdinal("taches_principales")),
@@ -296,16 +324,21 @@ public class AnnonceRepository : IAnnonceRepository
                 return null;
 
             string queryExigences = @"
-                SELECT
+               SELECT
                     e.Id AS id,
                     e.Libelle AS libelle,
-                    COALESCE(dc.Valeur, CAST(0 AS bit)) AS Valeur
+                    CAST(
+                            COALESCE(MAX(CAST(dc.Valeur AS int)), 0)
+                        AS bit
+                    ) AS Valeur
                 FROM Exigence e
-                LEFT JOIN DetailsCandidature dc
-                    ON e.Id = dc.exigenceId
+                         LEFT JOIN DetailsCandidature dc
+                                   ON e.Id = dc.exigenceId
                 WHERE e.annonceId = (
                     SELECT annonceId FROM Candidature WHERE Id = @CandidatureId
-                )";
+                )
+                GROUP BY e.Id, e.Libelle;
+            ";
     
             using (SqlCommand cmd = new SqlCommand(queryExigences, conn))
             {
@@ -347,14 +380,14 @@ public class AnnonceRepository : IAnnonceRepository
                     a.Description AS poste_description,
                     e.Nom as nom_entite,
                     a.dateLimiteDepotDossier as dateLimiteDepotDossier,
-                    st.Libelle AS statut,
+                    a.statutAnnonce AS statut,
                     a.tachesPrincipales as tachesPrincipales,
-                    a.id as annonce_id
+                    a.id as annonce_id,
+                    te.id as type_emploi_id
                 FROM Annonce a 
                 JOIN Entite e ON a.entiteId = e.Id
                 JOIN TypeContrat tc ON tc.Id = a.typeContratId
                 JOIN TypeEmploi te ON te.Id = a.typeEmploiId
-                JOIN StatutAnnonce st ON st.Id = a.statutAnnonceId
                 WHERE a.id = @annonceId";
 
             using (SqlCommand cmd = new SqlCommand(queryDetails, conn))
@@ -374,11 +407,12 @@ public class AnnonceRepository : IAnnonceRepository
                             DateCreationPoste = reader.GetDateTime(reader.GetOrdinal("date_creation")),
                             PosteDescription = reader.GetString(reader.GetOrdinal("poste_description")),
                             DateLimiteDepotDossier = reader.GetDateTime(reader.GetOrdinal("dateLimiteDepotDossier")),
-                            Statut = reader.GetString(reader.GetOrdinal("statut")),
+                            Statut = reader.GetInt32(reader.GetOrdinal("statut")),
                             NomEntite =  reader.GetString(reader.GetOrdinal("nom_entite")),
                             TachesPrincipales = reader.GetString(reader.GetOrdinal("tachesPrincipales")),
                             taches = reader.GetString(reader.GetOrdinal("tachesPrincipales")).Split(',') ?? new string[] { },
                             Annonce_ID =  reader.GetInt32(reader.GetOrdinal("annonce_id")),
+                            TypeEmploi_ID =  reader.GetInt32(reader.GetOrdinal("type_emploi_id")),
                         };
                     }
                 }
@@ -418,5 +452,56 @@ public class AnnonceRepository : IAnnonceRepository
         return result;
     }
 
+    public bool CheckIfUserAlreadyApply(int userId, int annonceId)
+    {
+        using (SqlConnection conn = new SqlConnection(_connectionString))
+        {
+            conn.Open();
+            string query = @"
+            SELECT 1
+            FROM Candidature
+            WHERE annonceId = @annonceId
+              AND candidatId = @candidatId";
 
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@annonceId", annonceId);
+                cmd.Parameters.AddWithValue("@candidatId", userId);
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    return reader.HasRows;
+                }
+            }
+        }
+    }
+    
+    public async Task<List<AnnonceElasticSearchResult>> SearchAsync(
+        string? titre,
+        string? lieu,
+        int? contratId,
+        int? emploiId,
+        string? sortOrder,
+        int page,
+        int size)
+    {
+        var query = new Dictionary<string, string?>
+        {
+            ["titre"] = titre,
+            ["lieu"] = lieu,
+            ["contratId"] = contratId > 0 ? contratId.ToString() : null,
+            ["emploiId"] = emploiId > 0 ? emploiId.ToString() : null,
+            ["page"] = page.ToString(),
+            ["size"] = size.ToString(),
+            ["sortOrder"] = sortOrder ?? "dateDesc"
+        };
+
+        var url = QueryHelpers.AddQueryString("/api/annonces/search", query!);
+
+        var pagedResult = await _httpClient.GetFromJsonAsync<PagedAnnonceResult>(url);
+
+        return pagedResult?.Annonces ?? new List<AnnonceElasticSearchResult>();
+    }
 }
+
+   

@@ -41,7 +41,7 @@ namespace Front_Office_Concours_Admin.Controllers
                 HttpContext.Session.SetString("CandidatNom", candidat.Nom);
                 HttpContext.Session.SetString("CandidatPrenom", candidat.Prenom);
 
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Annonces");
             }
             else
             {

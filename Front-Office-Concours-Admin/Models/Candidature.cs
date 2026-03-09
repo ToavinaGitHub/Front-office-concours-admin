@@ -1,5 +1,6 @@
 ﻿namespace Front_Office_Concours_Admin.Models;
 
+
 public class Candidature
 {
     public int Id { get; set; }
