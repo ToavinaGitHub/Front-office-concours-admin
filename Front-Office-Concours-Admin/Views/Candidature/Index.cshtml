@@ -1,4 +1,5 @@
-﻿@model List<Front_Office_Concours_Admin.Models.Candidature>
+﻿@using Front_Office_Concours_Admin.Extensions
+@model List<Front_Office_Concours_Admin.Models.Candidature>
 
 @{
     ViewData["Title"] = "Mes candidatures";
@@ -105,7 +106,7 @@
                                 <td>@c.DateCreation.ToString("dd/MM/yyyy")</td>
                                 <td>
                                     @{
-                                        string badgeClass = c.StatutCandidature.Id switch
+                                        string badgeClass = (int)c.StatutCandidature switch
                                         {
                                             1 => "bg-warning text-dark",
                                             2 => "bg-warning text-light",
@@ -114,7 +115,7 @@
                                         };
                                     }
                                     <span class="badge @badgeClass">
-                                        @c.StatutCandidature.Libelle
+                                        @c.StatutCandidature.GetDescription()
                                     </span>
                                 </td>
                                 <td>

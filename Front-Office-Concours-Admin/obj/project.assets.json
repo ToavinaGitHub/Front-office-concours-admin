@@ -2090,19 +2090,19 @@
     ]
   },
   "packageFolders": {
-    "/home/toavina/.nuget/packages/": {}
+    "/home/jessica/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin.csproj",
+      "projectUniqueName": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin.csproj",
       "projectName": "Front-Office-Concours-Admin",
-      "projectPath": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin.csproj",
-      "packagesPath": "/home/toavina/.nuget/packages/",
-      "outputPath": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/obj/",
+      "projectPath": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin.csproj",
+      "packagesPath": "/home/jessica/.nuget/packages/",
+      "outputPath": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/toavina/.nuget/NuGet/NuGet.Config"
+        "/home/jessica/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -2114,8 +2114,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/dotnetProjectShared/dotnetProjectShared.csproj": {
-              "projectPath": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/dotnetProjectShared/dotnetProjectShared.csproj"
+            "/home/jessica/UNIVERSITE/dotnet/dotnetProjectShared/dotnetProjectShared.csproj": {
+              "projectPath": "/home/jessica/UNIVERSITE/dotnet/dotnetProjectShared/dotnetProjectShared.csproj"
             }
           }
         }
@@ -2159,6 +2159,20 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[8.0.24, 8.0.24]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.linux-x64",
+            "version": "[8.0.24, 8.0.24]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[8.0.24, 8.0.24]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"

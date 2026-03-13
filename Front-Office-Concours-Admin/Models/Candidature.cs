@@ -1,5 +1,5 @@
 ﻿namespace Front_Office_Concours_Admin.Models;
-
+using StatutCandidature=dotnetProjectShared.Enums.StatutCandidature;
 
 public class Candidature
 {
@@ -9,7 +9,7 @@ public class Candidature
     public Annonce Annonce { get; set; }
 
     public int StatutCandidatureId { get; set; }
-    public StatutCandidature StatutCandidature { get; set; }
+    public dotnetProjectShared.Enums.StatutCandidature StatutCandidature { get; set; }
 
     public int CandidatId { get; set; }
     public Candidat Candidat { get; set; }

@@ -1,307 +1,307 @@
 {
   "Files": [
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/obj/Debug/net8.0/scopedcss/projectbundle/Front-Office-Concours-Admin.bundle.scp.css",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/obj/Debug/net8.0/scopedcss/projectbundle/Front-Office-Concours-Admin.bundle.scp.css",
       "PackagePath": "staticwebassets/Front-Office-Concours-Admin.bundle.scp.css"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/Img/logo.png",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/Img/logo.png",
       "PackagePath": "staticwebassets/Img/logo.png"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/css/animate.min.css",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/css/animate.min.css",
       "PackagePath": "staticwebassets/css/animate.min.css"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/css/annonces.css",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/css/annonces.css",
       "PackagePath": "staticwebassets/css/annonces.css"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/css/apply.css",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/css/apply.css",
       "PackagePath": "staticwebassets/css/apply.css"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/css/candidatures.css",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/css/candidatures.css",
       "PackagePath": "staticwebassets/css/candidatures.css"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/css/details_annonces.css",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/css/details_annonces.css",
       "PackagePath": "staticwebassets/css/details_annonces.css"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/css/details_candidature.css",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/css/details_candidature.css",
       "PackagePath": "staticwebassets/css/details_candidature.css"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/css/font-awesome.min.css",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/css/font-awesome.min.css",
       "PackagePath": "staticwebassets/css/font-awesome.min.css"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/css/linearicons.css",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/css/linearicons.css",
       "PackagePath": "staticwebassets/css/linearicons.css"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/css/login.css",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/css/login.css",
       "PackagePath": "staticwebassets/css/login.css"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/css/magnific-popup.css",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/css/magnific-popup.css",
       "PackagePath": "staticwebassets/css/magnific-popup.css"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/css/main.css",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/css/main.css",
       "PackagePath": "staticwebassets/css/main.css"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/css/nice-select.css",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/css/nice-select.css",
       "PackagePath": "staticwebassets/css/nice-select.css"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/css/owl.carousel.css",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/css/owl.carousel.css",
       "PackagePath": "staticwebassets/css/owl.carousel.css"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/css/signin.css",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/css/signin.css",
       "PackagePath": "staticwebassets/css/signin.css"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/css/site.css",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/favicon.ico",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/favicon.ico",
       "PackagePath": "staticwebassets/favicon.ico"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/js/site.js",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/js/site.js",
       "PackagePath": "staticwebassets/js/site.js"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/LICENSE",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/LICENSE",
       "PackagePath": "staticwebassets/lib/bootstrap"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css.map"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css.map"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css.map"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css.map"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css.map"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css.map"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css.map"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js.map"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js.map"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js.map"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js.map"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js.map"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
       "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/LICENSE.txt"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/jquery-validation/LICENSE.md",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/jquery-validation/LICENSE.md",
       "PackagePath": "staticwebassets/lib/jquery-validation/LICENSE.md"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/jquery-validation/dist/additional-methods.js",
       "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.js"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
       "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.min.js"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
       "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.js"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
       "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.min.js"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/jquery/LICENSE.txt",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/jquery/LICENSE.txt",
       "PackagePath": "staticwebassets/lib/jquery/LICENSE.txt"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/jquery/dist/jquery.js",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/jquery/dist/jquery.js",
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.js"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/jquery/dist/jquery.min.js",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/jquery/dist/jquery.min.js",
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.js"
     },
     {
-      "Id": "/media/toavina/Disque local1/Master 2/Gestion-concours-admin/Front-Office-Concours-Admin/Front-Office-Concours-Admin/wwwroot/lib/jquery/dist/jquery.min.map",
+      "Id": "/home/jessica/UNIVERSITE/dotnet/Front-office-concours-admin/Front-Office-Concours-Admin/wwwroot/lib/jquery/dist/jquery.min.map",
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
     },
     {

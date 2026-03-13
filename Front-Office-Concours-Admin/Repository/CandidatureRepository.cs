@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using Front_Office_Concours_Admin.Models;
+using StatutCandidature=dotnetProjectShared.Enums.StatutCandidature;
 
 namespace Front_Office_Concours_Admin.Repository
 {
@@ -32,7 +33,7 @@ namespace Front_Office_Concours_Admin.Repository
                     -- Récupération paginée
                     SELECT c.Id, c.AnnonceId, c.CandidatId, c.DateCreation, c.CV, c.LettreMotivation,
                            a.Titre AS AnnonceTitre, e.Nom AS NomEntite, a.lieuPoste AS LieuPoste,
-                           tc.Libelle AS TypeContrat, c.statutCandidature AS Statut,tc.Id AS TypeContrat_Id
+                           tc.Libelle AS TypeContrat, c.StatutCandidature AS Statut,tc.Id AS TypeContrat_Id
                     FROM Candidature c
                     INNER JOIN Annonce a ON c.AnnonceId = a.Id
                     INNER JOIN Entite e ON a.entiteId = e.Id
@@ -90,12 +91,9 @@ namespace Front_Office_Concours_Admin.Repository
                                         Nom = reader["NomEntite"]?.ToString()
                                     }
                                 },
+                                StatutCandidature = (StatutCandidature)(int)reader["Statut"]
 
-                                StatutCandidature = new StatutCandidature
-                                {
-                                    Id =  reader.GetInt32(reader.GetOrdinal("Statut")),
-                                    Libelle = reader["Statut"]?.ToString()
-                                }
+                                
                             };
 
                             result.Add(candidature);
@@ -122,12 +120,11 @@ namespace Front_Office_Concours_Admin.Repository
                 string sql = @"
                     SELECT c.Id, c.AnnonceId, c.CandidatId, c.DateCreation, c.CV, c.LettreMotivation,
                            a.Titre AS AnnonceTitre, e.Nom AS NomEntite, a.lieuPoste AS LieuPoste,
-                           tc.Libelle AS TypeContrat, s.Libelle AS Statut
+                           tc.Libelle AS TypeContrat,s.Candidature as Statut
                     FROM Candidature c
                     INNER JOIN Annonce a ON c.AnnonceId = a.Id
                     INNER JOIN Entite e ON a.entiteId = e.Id
                     INNER JOIN TypeContrat tc ON a.typeContratId = tc.Id
-                    INNER JOIN StatutCandidature s ON c.StatutCandidatureId = s.Id
                     WHERE c.Id = @id
                     ";
                 using (var cmd = new SqlCommand(sql, conn))
@@ -160,11 +157,10 @@ namespace Front_Office_Concours_Admin.Repository
                                         Nom = reader["NomEntite"]?.ToString()
                                     }
                                 },
+                                StatutCandidature= (StatutCandidature)(int)reader["Statut"]
 
-                                StatutCandidature = new StatutCandidature
-                                {
-                                    Libelle = reader["Statut"]?.ToString()
-                                }
+
+                                
                             };
                         }
                     }

@@ -2,6 +2,7 @@
 using Front_Office_Concours_Admin.Repository;
 using Front_Office_Concours_Admin.Services;
 using Microsoft.AspNetCore.Mvc;
+using StatutCandidature=dotnetProjectShared.Enums.StatutCandidature;
 
 namespace Front_Office_Concours_Admin.Controllers;
 
@@ -93,7 +94,8 @@ public class AnnoncesController : Controller
         {
             AnnonceId = AnnonceId,
             CandidatId = candidatId.Value,
-            StatutCandidatureId = 1,
+            StatutCandidatureId = (int)StatutCandidature.Envoyee,
+            StatutCandidature = StatutCandidature.Envoyee,
             DateCreation = DateTime.Now,
             DetailsCandidature = DetailsCandidature ?? new()
         };
