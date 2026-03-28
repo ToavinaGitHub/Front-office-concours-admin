@@ -13,7 +13,7 @@ builder.Services.AddSingleton<IConfiguration>(builder.Configuration);
 builder.Services.AddScoped<IAnnonceRepository, AnnonceRepository>();
 builder.Services.AddHttpClient<IAnnonceRepository, AnnonceRepository>(client =>
 {
-    client.BaseAddress = new Uri("http://192.168.88.16:5190");
+    client.BaseAddress = new Uri("http://localhost:5190");
 });
 
 builder.Services.AddScoped<CandidatureRepository>();

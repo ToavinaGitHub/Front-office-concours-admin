@@ -68,6 +68,8 @@ public class AnnoncesController : Controller
 
         var details = _repository.GetDetailsAnnonceById(id);
         var taches = details?.TachesPrincipales?.Split(',') ?? Array.Empty<string>();
+        
+        Console.WriteLine(details);
 
         return View(details);
     }
@@ -79,13 +81,18 @@ public class AnnoncesController : Controller
     }
     
      [HttpPost]
-    [ValidateAntiForgeryToken]
+    //[ValidateAntiForgeryToken]
     public async Task<IActionResult> CreateCandidature(
         int AnnonceId,
         List<DetailsCandidature> DetailsCandidature,
         IFormFile CVFile,
         IFormFile LMFile)
     {
+        
+        Console.WriteLine("AnnonceId",AnnonceId);
+        Console.WriteLine("CVFile",CVFile);
+        Console.WriteLine("LMFile",LMFile);
+        Console.WriteLine("DetailsCandidature",DetailsCandidature);
         int? candidatId = HttpContext.Session.GetInt32("CandidatId");
         if (candidatId == null)
             return RedirectToAction("Login", "Auth");
@@ -104,14 +111,14 @@ public class AnnoncesController : Controller
         {
             using var ms = new MemoryStream();
             await CVFile.CopyToAsync(ms);
-            candidature.CV = Convert.ToBase64String(ms.ToArray());
+            candidature.CV = ms.ToArray();
         }
 
         if (LMFile != null && LMFile.Length > 0)
         {
             using var ms = new MemoryStream();
             await LMFile.CopyToAsync(ms);
-            candidature.LettreMotivation = Convert.ToBase64String(ms.ToArray());
+            candidature.LettreMotivation = ms.ToArray();
         }
 
         foreach (var d in candidature.DetailsCandidature)

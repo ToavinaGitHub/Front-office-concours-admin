@@ -72,8 +72,8 @@ namespace Front_Office_Concours_Admin.Repository
                                 AnnonceId = Convert.ToInt32(reader["AnnonceId"]),
                                 CandidatId = Convert.ToInt32(reader["CandidatId"]),
                                 DateCreation = Convert.ToDateTime(reader["DateCreation"]),
-                                CV = reader["CV"]?.ToString(),
-                                LettreMotivation = reader["LettreMotivation"]?.ToString(),
+                                CV = reader["CV"] as byte[],
+                                LettreMotivation = reader["LettreMotivation"] as byte[],
 
                                 Annonce = new Annonce
                                 {
@@ -140,8 +140,8 @@ namespace Front_Office_Concours_Admin.Repository
                                 AnnonceId = Convert.ToInt32(reader["AnnonceId"]),
                                 CandidatId = Convert.ToInt32(reader["CandidatId"]),
                                 DateCreation = Convert.ToDateTime(reader["DateCreation"]),
-                                CV = reader["CV"]?.ToString(),
-                                LettreMotivation = reader["LettreMotivation"]?.ToString(),
+                                CV = reader["CV"] as byte[],
+                                LettreMotivation = reader["LettreMotivation"] as byte[],
 
                                 Annonce = new Annonce
                                 {
@@ -177,7 +177,7 @@ namespace Front_Office_Concours_Admin.Repository
             using var transaction = conn.BeginTransaction();
             
             
-
+            Console.WriteLine(candidature);
             try
             {
                 // Charger les exigences de l'annonce

@@ -14,8 +14,8 @@ public class Candidature
     public int CandidatId { get; set; }
     public Candidat Candidat { get; set; }
 
-    public string CV { get; set; }
-    public string LettreMotivation { get; set; }
+    public byte[] CV { get; set; }
+    public byte[] LettreMotivation { get; set; }
 
     public DateTime DateCreation { get; set; }
     public DateTime? DateModification { get; set; }
